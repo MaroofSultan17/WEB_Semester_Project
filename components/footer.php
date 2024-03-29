@@ -1,5 +1,3 @@
-<?php include ("./libraries/variables.php"); ?>
-
 <footer class="footer-section">
     <div class="container">
         <div class="row">
@@ -108,7 +106,9 @@
                 <div
                     class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-center justify-content-lg-start justify-content-center pb-3">
                     <div class="footer-bottom-left">
-                        <span>Designed with love © <a href="#"> <?php echo constant('siteAuthor'); ?></a> </span>
+                        <span>Designed with love © <a href="#">
+                                <?php echo constant('siteAuthor'); ?>
+                            </a> </span>
                     </div>
                 </div>
                 <div

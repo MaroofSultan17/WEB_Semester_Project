@@ -1,17 +1,22 @@
+<?php include ("./libraries/variables.php"); ?>
+<?php
+
+$PageIndex = 1;
+
+?>
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <title>Contact Us |
+        <?php echo (constant('siteTitle')); ?>
+    </title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Links  -->
     <?php
     echo require ("./components/links.php");
     ?>
-    <!-- Links -->
-
 </head>
 
 <body>
@@ -19,7 +24,6 @@
     <!-- HEADER-SECTION START  -->
 
     <?php require ("./components/header_collection.php"); ?>
-
 
     <!-- HEADER-SECTION END  -->
 

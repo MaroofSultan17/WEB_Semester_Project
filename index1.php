@@ -139,7 +139,7 @@ include ("./helper/db-config.php");
                             <!-- Signup Section Start -->
 
                             <li>
-                            
+
                                 <a class="sign-up header-popup d-flex align-items-center" id="header-popup2"
                                     href="#"><span class="log-in-text">sign
                                         up</span></a>
@@ -641,178 +641,19 @@ include ("./helper/db-config.php");
                             Featured</a></li>
                 </ul>
             </div>
+
+
             <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+                    <!-- Sale Recent Product Section Start -->
                     <div class="products ev-products">
-                        <!-- <div class="product">
-                            <div class="product-img">
-                                <a href="single-product.php">
-                                    <img src="./assets/images/sale/recent/poloshirtmen.png" alt="product">
-                                </a>
-                                <div class="product-labels d-flex justify-content-between">
-                                    <span class="ev-offer">-51%</span>
-                                </div>
-                                <div class="p-option">
-                                    <ul class="d-flex align-items-center justify-content-end">
-                                        <li class="anim-hidden"><a href="#"><i class="fa-regular fa-eye"></i></a></li>
-                                        <li class="anim-hidden"><a href="#"><i class="fa-solid fa-heart"></i></a></li>
-                                        <li class="anim-hidden"><a href="#"><i
-                                                    class="fa-solid fa-cart-shopping"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product-text">
-                                <ul class="product-stars d-flex">
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                </ul>
-                                <h2 class="product-title"><a href="single-product.php">polo shirt for men</a></h2>
-                                <ul class="d-flex align-items-center">
-                                    <li><span>$99</span></li>
-                                    <li><span>$200</span></li>
-                                </ul>
-                            </div>
-                        </div>
-
-
-                        <div class="product">
-                            <div class="product-img">
-                                <a href="single-product.php">
-                                    <img src="./assets/images/sale/recent/Girlsnightgown.png" alt="product">
-                                </a>
-                                <div class="product-labels d-flex justify-content-between">
-                                    <span class="ev-offer">-51%</span>
-                                    <span class="ev-hot">hot</span>
-                                </div>
-                                <div class="p-option">
-                                    <ul class="d-flex align-items-center justify-content-end">
-                                        <li class="anim-hidden"><a href="#"><i class="fa-regular fa-eye"></i></a></li>
-                                        <li class="anim-hidden"><a href="#"><i class="fa-solid fa-heart"></i></a></li>
-                                        <li class="anim-hidden"><a href="#"><i
-                                                    class="fa-solid fa-cart-shopping"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product-text">
-                                <ul class="product-stars d-flex">
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                </ul>
-                                <h2 class="product-title"><a href="single-product.php">Girls night gown</a></h2>
-                                <ul class="d-flex align-items-center">
-                                    <li><span>$99</span></li>
-                                    <li><span>$200</span></li>
-                                </ul>
-                            </div>
-                        </div>
-
-
-                        <div class="product">
-                            <div class="product-img">
-                                <a href="single-product.php">
-                                    <img src="./assets/images/sale/recent/MensT-shirt.png" alt="product">
-                                </a>
-                                <div class="p-option">
-                                    <ul class="d-flex align-items-center justify-content-end">
-                                        <li class="anim-hidden"><a href="#"><i class="fa-regular fa-eye"></i></a></li>
-                                        <li class="anim-hidden"><a href="#"><i class="fa-solid fa-heart"></i></a></li>
-                                        <li class="anim-hidden"><a href="#"><i
-                                                    class="fa-solid fa-cart-shopping"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product-text">
-                                <ul class="product-stars d-flex">
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                </ul>
-                                <h2 class="product-title"><a href="single-product.php">Mens stylish T-shirt</a></h2>
-                                <ul class="d-flex align-items-center">
-                                    <li><span>$99</span></li>
-                                </ul>
-                            </div>
-                        </div>
-
-
-                        <div class="product">
-                            <div class="product-img">
-                                <a href="single-product.php">
-                                    <img src="./assets/images/sale/recent/towel.png" alt="product">
-                                </a>
-                                <div class="p-option">
-                                    <ul class="d-flex align-items-center justify-content-end">
-                                        <li class="anim-hidden"><a href="#"><i class="fa-regular fa-eye"></i></a></li>
-                                        <li class="anim-hidden"><a href="#"><i class="fa-solid fa-heart"></i></a></li>
-                                        <li class="anim-hidden"><a href="#"><i
-                                                    class="fa-solid fa-cart-shopping"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product-text">
-                                <ul class="product-stars d-flex">
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                </ul>
-                                <h2 class="product-title"><a href="single-product.php">Simple soft towel</a></h2>
-                                <ul class="d-flex align-items-center">
-                                    <li><span>$99</span></li>
-                                </ul>
-                            </div>
-                        </div>
-
-
-                        <div class="product">
-                            <div class="product-img">
-                                <a href="single-product.php">
-                                    <img src="./assets/images/sale/recent/Womanfashiondress.png" alt="product">
-                                </a>
-                                <div class="product-labels d-flex justify-content-between">
-                                    <span class="ev-hot">hot</span>
-                                </div>
-                                <div class="p-option">
-                                    <ul class="d-flex align-items-center justify-content-end">
-                                        <li class="anim-hidden"><a href="#"><i class="fa-regular fa-eye"></i></a></li>
-                                        <li class="anim-hidden"><a href="#"><i class="fa-solid fa-heart"></i></a></li>
-                                        <li class="anim-hidden"><a href="#"><i
-                                                    class="fa-solid fa-cart-shopping"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product-text">
-                                <ul class="product-stars d-flex">
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                </ul>
-                                <h2 class="product-title"><a href="single-product.php">Woman fashion dress</a></h2>
-                                <ul class="d-flex align-items-center">
-                                    <li><span>$99</span></li>
-                                </ul>
-                            </div>
-                        </div> -->
-
-
                         <?php
-                        $Query = "SELECT * FROM sale";
+                        $Query = "SELECT * FROM sale WHERE catageory = 'recent'";
                         $result = mysqli_query($conn, $Query);
                         if ($result->num_rows > 0) {
                             while ($row = mysqli_fetch_array($result)) {
                                 ?>
-
                                 <!-- Single Product -->
                                 <div class="product">
                                     <div class="product-img">
@@ -864,391 +705,145 @@ include ("./helper/db-config.php");
                         <!-- Single Product End -->
 
                     </div>
+
+                    <!-- Sale Recent Product Section End -->
                 </div>
+
+                <!-- Sale Popular Product Start -->
                 <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                     <div class="products ev-products">
-                        <div class="product">
-                            <div class="product-img">
-                                <a href="single-product.php">
-                                    <img src="images/index-1/products/popular/shape-1.png" alt="product">
-                                </a>
-                                <div class="product-labels d-flex justify-content-between">
-                                    <span class="ev-offer">-51%</span>
-                                    <span class="ev-hot">hot</span>
+                        <?php
+                        $Query = "SELECT * FROM sale WHERE catageory = 'popular'";
+                        $result = mysqli_query($conn, $Query);
+                        if ($result->num_rows > 0) {
+                            while ($row = mysqli_fetch_array($result)) {
+                                ?>
+                                <!-- Single Product -->
+                                <div class="product">
+                                    <div class="product-img">
+                                        <a href="single-product.php">
+                                            <img src="<?php echo $row['image']; ?>" alt="product">
+                                        </a>
+                                        <div class="product-labels d-flex justify-content-between">
+                                            <span class="ev-offer">-
+                                                <?php echo $row['percentoff']; ?>%
+                                            </span>
+                                            <span class="ev-hot">hot</span>
+                                        </div>
+                                        <div class="p-option">
+                                            <ul class="d-flex align-items-center justify-content-end">
+                                                <li class="anim-hidden"><a href="#"><i class="fa-regular fa-eye"></i></a></li>
+                                                <li class="anim-hidden"><a href="#"><i class="fa-solid fa-heart"></i></a></li>
+                                                <li class="anim-hidden"><a href="#"><i
+                                                            class="fa-solid fa-cart-shopping"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-text">
+                                        <ul class="product-stars d-flex">
+                                            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                                            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                                            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                                            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                                            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                                        </ul>
+                                        <h2 class="product-title"><a href="single-product.php">
+                                                <?php echo $row['title']; ?>
+                                            </a></h2>
+                                        <ul class="d-flex align-items-center">
+                                            <li><span>$
+                                                    <?php echo $row['priceonoff']; ?>
+                                                </span></li>
+                                            <li><span>$
+                                                    <?php echo $row['totalprice']; ?>
+                                                </span></li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="p-option">
-                                    <ul class="d-flex align-items-center justify-content-end">
-                                        <li class="anim-hidden"><a href="#"><i class="fa-regular fa-eye"></i></a></li>
-                                        <li class="anim-hidden"><a href="#"><i class="fa-solid fa-heart"></i></a></li>
-                                        <li class="anim-hidden"><a href="#"><i
-                                                    class="fa-solid fa-cart-shopping"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product-text">
-                                <ul class="product-stars d-flex">
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                </ul>
-                                <h2 class="product-title"><a href="single-product.php">polo shirt for men</a></h2>
-                                <ul class="d-flex align-items-center">
-                                    <li><span>$99</span></li>
-                                    <li><span>$200</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <div class="product-img">
-                                <a href="single-product.php">
-                                    <img src="images/index-1/products/popular/shape-2.png" alt="product">
-                                </a>
-                                <div class="product-labels d-flex justify-content-between">
-                                    <span class="ev-hot">hot</span>
-                                </div>
-                                <div class="p-option">
-                                    <ul class="d-flex align-items-center justify-content-end">
-                                        <li class="anim-hidden"><a href="#"><i class="fa-regular fa-eye"></i></a></li>
-                                        <li class="anim-hidden"><a href="#"><i class="fa-solid fa-heart"></i></a></li>
-                                        <li class="anim-hidden"><a href="#"><i
-                                                    class="fa-solid fa-cart-shopping"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product-text">
-                                <ul class="product-stars d-flex">
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                </ul>
-                                <h2 class="product-title"><a href="single-product.php">Girls night gown</a></h2>
-                                <ul class="d-flex align-items-center">
-                                    <li><span>$99</span></li>
-                                    <li><span>$200</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <div class="product-img">
-                                <a href="single-product.php">
-                                    <img src="images/index-1/products/popular/shape-3.png" alt="product">
-                                </a>
-                                <div class="p-option">
-                                    <ul class="d-flex align-items-center justify-content-end">
-                                        <li class="anim-hidden"><a href="#"><i class="fa-regular fa-eye"></i></a></li>
-                                        <li class="anim-hidden"><a href="#"><i class="fa-solid fa-heart"></i></a></li>
-                                        <li class="anim-hidden"><a href="#"><i
-                                                    class="fa-solid fa-cart-shopping"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product-text">
-                                <ul class="product-stars d-flex">
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                </ul>
-                                <h2 class="product-title"><a href="single-product.php">Mens stylish T-shirt</a></h2>
-                                <ul class="d-flex align-items-center">
-                                    <li><span>$99</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <div class="product-img">
-                                <a href="single-product.php">
-                                    <img src="images/index-1/products/popular/shape-4.png" alt="product">
-                                </a>
-                                <div class="product-labels d-flex justify-content-between">
-                                    <span class="ev-offer">-51%</span>
-                                </div>
-                                <div class="p-option">
-                                    <ul class="d-flex align-items-center justify-content-end">
-                                        <li class="anim-hidden"><a href="#"><i class="fa-regular fa-eye"></i></a></li>
-                                        <li class="anim-hidden"><a href="#"><i class="fa-solid fa-heart"></i></a></li>
-                                        <li class="anim-hidden"><a href="#"><i
-                                                    class="fa-solid fa-cart-shopping"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product-text">
-                                <ul class="product-stars d-flex">
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                </ul>
-                                <h2 class="product-title"><a href="single-product.php">Simple soft towel</a></h2>
-                                <ul class="d-flex align-items-center">
-                                    <li><span>$99</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <div class="product-img">
-                                <a href="single-product.php">
-                                    <img src="images/index-1/products/popular/shape-5.png" alt="product">
-                                </a>
-                                <div class="product-labels d-flex justify-content-between">
-                                    <span class="ev-hot">hot</span>
-                                </div>
-                                <div class="p-option">
-                                    <ul class="d-flex align-items-center justify-content-end">
-                                        <li class="anim-hidden"><a href="#"><i class="fa-regular fa-eye"></i></a></li>
-                                        <li class="anim-hidden"><a href="#"><i class="fa-solid fa-heart"></i></a></li>
-                                        <li class="anim-hidden"><a href="#"><i
-                                                    class="fa-solid fa-cart-shopping"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product-text">
-                                <ul class="product-stars d-flex">
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                </ul>
-                                <h2 class="product-title"><a href="single-product.php">polo shirt for men</a></h2>
-                                <ul class="d-flex align-items-center">
-                                    <li><span>$99</span></li>
-                                    <li><span>$200</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <div class="product-img">
-                                <a href="single-product.php">
-                                    <img src="images/index-1/products/popular/shape-6.png" alt="product">
-                                </a>
-                                <div class="product-labels d-flex justify-content-between">
-                                    <span class="ev-offer">-51%</span>
-                                    <span class="ev-hot">hot</span>
-                                </div>
-                                <div class="p-option">
-                                    <ul class="d-flex align-items-center justify-content-end">
-                                        <li class="anim-hidden"><a href="#"><i class="fa-regular fa-eye"></i></a></li>
-                                        <li class="anim-hidden"><a href="#"><i class="fa-solid fa-heart"></i></a></li>
-                                        <li class="anim-hidden"><a href="#"><i
-                                                    class="fa-solid fa-cart-shopping"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product-text">
-                                <ul class="product-stars d-flex">
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                </ul>
-                                <h2 class="product-title"><a href="single-product.php">Girls night gown</a></h2>
-                                <ul class="d-flex align-items-center">
-                                    <li><span>$99</span></li>
-                                    <li><span>$200</span></li>
-                                </ul>
-                            </div>
-                        </div>
+                                <?php
+                            }
+                        } else {
+                            echo 'Data Not Found';
+                        }
+                        ?>
                     </div>
+                    <!-- Single Product End -->
+
                 </div>
+
+                <!-- Sale Popular Product End -->
+
+
+                <!-- Sale Top Product Start -->
+
                 <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
                     <div class="products ev-products">
-                        <div class="product">
-                            <div class="product-img">
-                                <a href="single-product.php">
-                                    <img src="images/index-1/products/top/shape-1.png" alt="product">
-                                </a>
-                                <div class="product-labels d-flex justify-content-between">
-                                    <span class="ev-offer">-51%</span>
-                                    <span class="ev-hot">hot</span>
+                        <?php
+                        $Query = "SELECT * FROM sale WHERE catageory = 'top'";
+                        $result = mysqli_query($conn, $Query);
+                        if ($result->num_rows > 0) {
+                            while ($row = mysqli_fetch_array($result)) {
+                                ?>
+                                <!-- Single Product -->
+                                <div class="product">
+                                    <div class="product-img">
+                                        <a href="single-product.php">
+                                            <img src="<?php echo $row['image']; ?>" alt="product">
+                                        </a>
+                                        <div class="product-labels d-flex justify-content-between">
+                                            <span class="ev-offer">-
+                                                <?php echo $row['percentoff']; ?>%
+                                            </span>
+                                            <span class="ev-hot">hot</span>
+                                        </div>
+                                        <div class="p-option">
+                                            <ul class="d-flex align-items-center justify-content-end">
+                                                <li class="anim-hidden"><a href="#"><i class="fa-regular fa-eye"></i></a></li>
+                                                <li class="anim-hidden"><a href="#"><i class="fa-solid fa-heart"></i></a></li>
+                                                <li class="anim-hidden"><a href="#"><i
+                                                            class="fa-solid fa-cart-shopping"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-text">
+                                        <ul class="product-stars d-flex">
+                                            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                                            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                                            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                                            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                                            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+                                        </ul>
+                                        <h2 class="product-title"><a href="single-product.php">
+                                                <?php echo $row['title']; ?>
+                                            </a></h2>
+                                        <ul class="d-flex align-items-center">
+                                            <li><span>$
+                                                    <?php echo $row['priceonoff']; ?>
+                                                </span></li>
+                                            <li><span>$
+                                                    <?php echo $row['totalprice']; ?>
+                                                </span></li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="p-option">
-                                    <ul class="d-flex align-items-center justify-content-end">
-                                        <li class="anim-hidden"><a href="#"><i class="fa-regular fa-eye"></i></a></li>
-                                        <li class="anim-hidden"><a href="#"><i class="fa-solid fa-heart"></i></a></li>
-                                        <li class="anim-hidden"><a href="#"><i
-                                                    class="fa-solid fa-cart-shopping"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product-text">
-                                <ul class="product-stars d-flex">
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                </ul>
-                                <h2 class="product-title"><a href="single-product.php">Mens stylish T-shirt</a></h2>
-                                <ul class="d-flex align-items-center">
-                                    <li><span>$99</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <div class="product-img">
-                                <a href="single-product.php">
-                                    <img src="images/index-1/products/top/shape-2.png" alt="product">
-                                </a>
-                                <div class="p-option">
-                                    <ul class="d-flex align-items-center justify-content-end">
-                                        <li class="anim-hidden"><a href="#"><i class="fa-regular fa-eye"></i></a></li>
-                                        <li class="anim-hidden"><a href="#"><i class="fa-solid fa-heart"></i></a></li>
-                                        <li class="anim-hidden"><a href="#"><i
-                                                    class="fa-solid fa-cart-shopping"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product-text">
-                                <ul class="product-stars d-flex">
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                </ul>
-                                <h2 class="product-title"><a href="single-product.php">Simple soft towel</a></h2>
-                                <ul class="d-flex align-items-center">
-                                    <li><span>$99</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <div class="product-img">
-                                <a href="single-product.php">
-                                    <img src="images/index-1/products/top/shape-3.png" alt="product">
-                                </a>
-                                <div class="product-labels d-flex justify-content-between">
-                                    <span class="ev-hot">hot</span>
-                                </div>
-                                <div class="p-option">
-                                    <ul class="d-flex align-items-center justify-content-end">
-                                        <li class="anim-hidden"><a href="#"><i class="fa-regular fa-eye"></i></a></li>
-                                        <li class="anim-hidden"><a href="#"><i class="fa-solid fa-heart"></i></a></li>
-                                        <li class="anim-hidden"><a href="#"><i
-                                                    class="fa-solid fa-cart-shopping"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product-text">
-                                <ul class="product-stars d-flex">
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                </ul>
-                                <h2 class="product-title"><a href="single-product.php">polo shirt for men</a></h2>
-                                <ul class="d-flex align-items-center">
-                                    <li><span>$99</span></li>
-                                    <li><span>$200</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <div class="product-img">
-                                <a href="single-product.php">
-                                    <img src="images/index-1/products/top/shape-4.png" alt="product">
-                                </a>
-                                <div class="product-labels d-flex justify-content-between">
-                                    <span class="ev-hot">hot</span>
-                                </div>
-                                <div class="p-option">
-                                    <ul class="d-flex align-items-center justify-content-end">
-                                        <li class="anim-hidden"><a href="#"><i class="fa-regular fa-eye"></i></a></li>
-                                        <li class="anim-hidden"><a href="#"><i class="fa-solid fa-heart"></i></a></li>
-                                        <li class="anim-hidden"><a href="#"><i
-                                                    class="fa-solid fa-cart-shopping"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product-text">
-                                <ul class="product-stars d-flex">
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                </ul>
-                                <h2 class="product-title"><a href="single-product.php">Girls night gown</a></h2>
-                                <ul class="d-flex align-items-center">
-                                    <li><span>$99</span></li>
-                                    <li><span>$200</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <div class="product-img">
-                                <a href="single-product.php">
-                                    <img src="images/index-1/products/top/shape-5.png" alt="product">
-                                </a>
-                                <div class="p-option">
-                                    <ul class="d-flex align-items-center justify-content-end">
-                                        <li class="anim-hidden"><a href="#"><i class="fa-regular fa-eye"></i></a></li>
-                                        <li class="anim-hidden"><a href="#"><i class="fa-solid fa-heart"></i></a></li>
-                                        <li class="anim-hidden"><a href="#"><i
-                                                    class="fa-solid fa-cart-shopping"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product-text">
-                                <ul class="product-stars d-flex">
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                </ul>
-                                <h2 class="product-title"><a href="single-product.php">Mens stylish T-shirt</a></h2>
-                                <ul class="d-flex align-items-center">
-                                    <li><span>$99</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <div class="product-img">
-                                <a href="single-product.php">
-                                    <img src="images/index-1/products/top/shape-6.png" alt="product">
-                                </a>
-                                <div class="product-labels d-flex justify-content-between">
-                                    <span class="ev-offer">-51%</span>
-                                </div>
-                                <div class="p-option">
-                                    <ul class="d-flex align-items-center justify-content-end">
-                                        <li class="anim-hidden"><a href="#"><i class="fa-regular fa-eye"></i></a></li>
-                                        <li class="anim-hidden"><a href="#"><i class="fa-solid fa-heart"></i></a></li>
-                                        <li class="anim-hidden"><a href="#"><i
-                                                    class="fa-solid fa-cart-shopping"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="product-text">
-                                <ul class="product-stars d-flex">
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                    <li><i class="fa-sharp fa-solid fa-star"></i></li>
-                                </ul>
-                                <h2 class="product-title"><a href="single-product.php">Simple soft towel</a></h2>
-                                <ul class="d-flex align-items-center">
-                                    <li><span>$99</span></li>
-                                </ul>
-                            </div>
-                        </div>
+                                <?php
+                            }
+                        } else {
+                            echo 'Data Not Found';
+                        }
+                        ?>
                     </div>
                 </div>
+                <!-- Sale Top Product End -->
+
             </div>
-            <a href="shop-with-sidebar.php" class="view-all">View All</a>
+        </div>
+        <a href="shop-with-sidebar.php" class="view-all">View All</a>
         </div>
     </section>
+
 
     <!-- PRODUCT-SECTION END  -->
 

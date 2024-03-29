@@ -1,5 +1,3 @@
-<?php include ("./libraries/variables.php"); ?>
-
 <header class="header-section header-section-two">
     <div class="top-bar" id="d-hide">
         <div class="container d-flex align-items-center justify-content-between">
@@ -14,32 +12,34 @@
                     <li><a href="#"><i class="fa-sharp fa-solid fa-location-dot"></i>Locate Our Shop</a></li>
                 </ul>
             </div>
+
             <div class="top-bar-social d-flex align-items-center">
                 <ul class="view-switcher d-flex align-items-center">
-                    <li>
+                    <!-- <li>
                         <span>usd<i class="fa-solid fa-angle-down"></i></span>
                         <ul class="evani-curency">
                             <li><a href="#">euro</a></li>
                             <li><a href="#">tk</a></li>
                             <li><a href="#">usd</a></li>
                         </ul>
-                    </li>
-                    <li>
+                    </li> -->
+                    <!-- <li>
                         <span>en<i class="fa-solid fa-angle-down"></i></span>
                         <ul class="evani-curency">
                             <li><a href="#">english</a></li>
                             <li><a href="#">bangla</a></li>
                             <li><a href="#">jerman</a></li>
                         </ul>
-                    </li>
+                    </li> -->
                 </ul>
-                <ul class="social-icon d-flex align-items-center">
+                <ul class="social-icon d-flex align-items-center" style="padding:10px;">
                     <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a></li>
                     <li><a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a></li>
                     <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a></li>
                     <li><a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a></li>
                 </ul>
             </div>
+
         </div>
     </div>
     <div class="header-middle sticky-header">
@@ -69,13 +69,13 @@
                                         <li class="menu-item-has-children">
                                             <a href="./index.php" class="nav-link  active ">Home <i
                                                     class="fa fa-angle-down"></i></a>
-                                            <div class="sub-menu single-column-menu">
+                                            <!-- <div class="sub-menu single-column-menu">
                                                 <ul>
                                                     <li><a href="index-2.html">Home One</a></li>
                                                     <li><a href="index_2.html">Home two</a></li>
                                                     <li><a href="index_3.html">Home three</a></li>
                                                 </ul>
-                                            </div>
+                                            </div> -->
                                         </li>
                                         <li class="menu-item-has-children">
                                             <a href="#" class="nav-link">Shop <i
@@ -214,7 +214,11 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <a href="contact-us.html" class="nav-link">Contact</a>
+                                            <a href="contact-us.php" class="nav-link <?php if ($PageIndex == 1) {
+                                                echo "active";
+                                            } else {
+                                                echo "";
+                                            } ?>">Contact</a>
                                         </li>
                                     </ul>
                                 </nav>
