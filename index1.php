@@ -1,35 +1,40 @@
 <?php
+include ("./libraries/variables.php");
 include ("./helper/db-config.php");
 ?>
 
 
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
+    <title>Login | Signup |
+        <?php echo (constant('siteTitle')); ?>
+    </title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Links  -->
     <?php
     echo require ("./components/links.php");
     ?>
-    <!-- Links -->
 </head>
 
 <body>
-
     <!-- HEADER-SECTION START  -->
-
     <header class="header-section">
         <div class="top-bar">
             <div class="container d-flex align-items-center justify-content-between">
                 <div class="top-bar-contact d-flex align-items-center">
                     <ul class="d-flex align-items-center">
-                        <li><a href="#"><i class="fa-solid fa-phone"></i>+123 456 7890</a></li>
-                        <li><a href="#"><i class="fa-regular fa-envelope"></i>hello@evani.com</a></li>
-                        <li><a href="#"><i class="fa-sharp fa-solid fa-location-dot"></i>Locate Our Shop</a></li>
+                        <li><a href="#"><i class="fa-solid fa-phone"></i>
+                                <?php echo constant('siteContact'); ?>
+                            </a></li>
+                        <li><a href="#"><i class="fa-regular fa-envelope"></i>
+                                <?php echo constant('siteEmail'); ?>
+                            </a></li>
+                        <li><a href="#"><i class="fa-sharp fa-solid fa-location-dot"></i>
+                                <?php echo constant('address'); ?>
+                            </a></li>
                     </ul>
                 </div>
                 <div class="top-bar-social d-flex align-items-center">
@@ -405,19 +410,15 @@ include ("./helper/db-config.php");
             </div>
         </div>
     </header>
-
     <!-- HEADER-SECTION END  -->
 
     <!-- BANNER-SECTION START  -->
-
     <?php
     require ("./components/banner.php");
     ?>
-
     <!-- BANNER-SECTION END  -->
 
     <!-- INTR0-SECTION START  -->
-
     <section class="intro-section">
         <div class="container">
             <div class="intro-items">
@@ -460,11 +461,9 @@ include ("./helper/db-config.php");
             </div>
         </div>
     </section>
-
     <!-- INTR0-SECTION END  -->
 
     <!-- CATAGORIES-SECTION START  -->
-
     <section class="categories-section">
         <div class="container">
             <div class="ev-top-content">
@@ -508,11 +507,9 @@ include ("./helper/db-config.php");
             <a href="shop-with-sidebar.php" class="view-all">View All</a>
         </div>
     </section>
-
     <!-- CATAGORIES-SECTION END  -->
 
     <!-- COLLECTION-SECTION START  -->
-
     <section class="collection-section">
         <div class="container">
             <div class="ev-top-content">
@@ -616,11 +613,9 @@ include ("./helper/db-config.php");
             </div>
         </div>
     </section>
-
     <!-- COLLECTION-SECTION END  -->
 
     <!-- `PRODUCT-SECTION START  -->
-
     <section class="product-section">
         <div class="container">
             <div class="ev-top-content">
@@ -843,12 +838,9 @@ include ("./helper/db-config.php");
         <a href="shop-with-sidebar.php" class="view-all">View All</a>
         </div>
     </section>
-
-
     <!-- PRODUCT-SECTION END  -->
 
     <!--    FEATURED-PRODUCT-SECTION START  -->
-
     <section class="featured-product-section">
         <div class="container">
             <div class="row">
@@ -880,11 +872,9 @@ include ("./helper/db-config.php");
             </div>
         </div>
     </section>
-
     <!--    FEATURED-PRODUCT-SECTION END  -->
 
     <!--    FEATURED-COLLECTION-SECTION START  -->
-
     <section class="featured-collection-section">
         <div class="container-fluid">
             <div class="collection-grid">
@@ -914,11 +904,9 @@ include ("./helper/db-config.php");
             </div>
         </div>
     </section>
-
     <!--    FEATURED-COLLECTION-SECTION END  -->
 
     <!--    POPULAR-PRODUCT-SECTION START  -->
-
     <section class="popular-product-section">
         <div class="container">
             <div class="ev-top-content">
@@ -1123,11 +1111,9 @@ include ("./helper/db-config.php");
             </div>
         </div>
     </section>
-
     <!--    POPULAR-PRODUCT-SECTION END  -->
 
     <!--    BRAND-SECTION START  -->
-
     <section class="brand-section">
         <div class="container">
             <div class="brand-heading">
@@ -1184,11 +1170,9 @@ include ("./helper/db-config.php");
             </div>
         </div>
     </section>
-
     <!--    BRAND-SECTION END  -->
 
     <!--    TESTIMONIAL-SECTION START  -->
-
     <section class="testimonial-section">
         <div class="container">
             <div class="ev-top-content">
@@ -1376,11 +1360,9 @@ include ("./helper/db-config.php");
             </div>
         </div>
     </section>
-
     <!--    TESTIMONIAL-SECTION END  -->
 
     <!--    NEWS-SECTION START  -->
-
     <section class="news-section">
         <div class="container">
             <div class="ev-top-content">
@@ -1461,27 +1443,17 @@ include ("./helper/db-config.php");
             </div>
         </div>
     </section>
-
     <!--    NEWS-SECTION END  -->
 
 
     <!--    FOOTER-SECTION START -->
-
-
     <?php require ("./components/footer.php"); ?>
-
-
-
     <!-- FOOTER-SECTION END  -->
 
-
     <!--    FOOTER-ICONTOP START  -->
-
     <div class="footer_iconTop">
         <a href="#" id="button"><i class="fa-solid fa-arrow-up"></i></a>
     </div>
-
-
     <!--    FOOTER-ICONTOP END  -->
 
 

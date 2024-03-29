@@ -46,7 +46,7 @@
         <div class="container d-flex align-items-center justify-content-between">
             <div class="header-middle-left">
                 <div class="evani-brand">
-                    <a href="index-2.html">
+                    <a href="index-2.php">
                         <img src="images/header/logo/logo.png" alt="logo">
                     </a>
                 </div>
@@ -67,18 +67,25 @@
                                     </div>
                                     <ul class="menu-items">
                                         <li class="menu-item-has-children">
-                                            <a href="./index.php" class="nav-link  active ">Home <i
-                                                    class="fa fa-angle-down"></i></a>
+                                            <a href="./index.php" class="nav-link  <?php if ($PageIndex == 'home') {
+                                                echo "active";
+                                            } else {
+                                                echo "";
+                                            } ?> ">Home <i class="fa fa-angle-down"></i></a>
                                             <!-- <div class="sub-menu single-column-menu">
                                                 <ul>
-                                                    <li><a href="index-2.html">Home One</a></li>
-                                                    <li><a href="index_2.html">Home two</a></li>
-                                                    <li><a href="index_3.html">Home three</a></li>
+                                                    <li><a href="index-2.php">Home One</a></li>
+                                                    <li><a href="index_2.php">Home two</a></li>
+                                                    <li><a href="index_3.php">Home three</a></li>
                                                 </ul>
                                             </div> -->
                                         </li>
                                         <li class="menu-item-has-children">
-                                            <a href="#" class="nav-link">Shop <i
+                                            <a href="#" class="nav-link <?php if ($PageIndex == 'shop') {
+                                                echo "active";
+                                            } else {
+                                                echo "";
+                                            } ?>">Shop <i
                                                     class="fa fa-angle-down nav-icon d-lg-none d-md-block"></i></a>
                                             <div class="sub-menu mega-menu mega-menu-column-4">
                                                 <div class="list-item">
@@ -100,37 +107,37 @@
                                                 <div class="list-item">
                                                     <h4 class="title">Women's Fashion</h4>
                                                     <ul>
-                                                        <li><a href="shop-with-sidebar.html">Night Gown</a></li>
-                                                        <li><a href="shop-with-sidebar.html">Soft Towel</a></li>
-                                                        <li><a href="shop-with-sidebar.html">Fashion Dress</a></li>
-                                                        <li><a href="shop-with-sidebar.html">Women's Bag</a></li>
+                                                        <li><a href="shop-with-sidebar.php">Night Gown</a></li>
+                                                        <li><a href="shop-with-sidebar.php">Soft Towel</a></li>
+                                                        <li><a href="shop-with-sidebar.php">Fashion Dress</a></li>
+                                                        <li><a href="shop-with-sidebar.php">Women's Bag</a></li>
                                                     </ul>
                                                     <h4 class="title">Women's Beauty</h4>
                                                     <ul>
-                                                        <li><a href="shop-with-sidebar.html">Face Care</a></li>
-                                                        <li><a href="shop-with-sidebar.html">Lip Make-up</a></li>
-                                                        <li><a href="shop-with-sidebar.html">Hand care</a></li>
-                                                        <li><a href="shop-with-sidebar.html">Cross-body Bags</a>
+                                                        <li><a href="shop-with-sidebar.php">Face Care</a></li>
+                                                        <li><a href="shop-with-sidebar.php">Lip Make-up</a></li>
+                                                        <li><a href="shop-with-sidebar.php">Hand care</a></li>
+                                                        <li><a href="shop-with-sidebar.php">Cross-body Bags</a>
                                                         </li>
                                                     </ul>
                                                 </div>
                                                 <div class="list-item">
                                                     <h4 class="title">Home, Kitchen</h4>
                                                     <ul>
-                                                        <li><a href="shop-with-sidebar.html">Kitchen Appliances</a>
+                                                        <li><a href="shop-with-sidebar.php">Kitchen Appliances</a>
                                                         </li>
-                                                        <li><a href="shop-with-sidebar.html">Lights & Electrical</a>
+                                                        <li><a href="shop-with-sidebar.php">Lights & Electrical</a>
                                                         </li>
-                                                        <li><a href="shop-with-sidebar.html">Basket & Bucket</a>
+                                                        <li><a href="shop-with-sidebar.php">Basket & Bucket</a>
                                                         </li>
-                                                        <li><a href="shop-with-sidebar.html">Kitchen Accessories</a>
+                                                        <li><a href="shop-with-sidebar.php">Kitchen Accessories</a>
                                                         </li>
-                                                        <li><a href="shop-with-sidebar.html">Box & Container</a>
+                                                        <li><a href="shop-with-sidebar.php">Box & Container</a>
                                                         </li>
-                                                        <li><a href="shop-with-sidebar.html">Disposables</a></li>
-                                                        <li><a href="shop-with-sidebar.html">Rack & Organizer</a>
+                                                        <li><a href="shop-with-sidebar.php">Disposables</a></li>
+                                                        <li><a href="shop-with-sidebar.php">Rack & Organizer</a>
                                                         </li>
-                                                        <li><a href="shop-with-sidebar.html">Gardening</a></li>
+                                                        <li><a href="shop-with-sidebar.php">Gardening</a></li>
                                                     </ul>
                                                 </div>
                                                 <div class="list-item">
@@ -139,7 +146,11 @@
                                             </div>
                                         </li>
                                         <li class="menu-item-has-children">
-                                            <a href="#" class="nav-link">Collections <i
+                                            <a href="#" class="nav-link <?php if ($PageIndex == 'collections') {
+                                                echo "active";
+                                            } else {
+                                                echo "";
+                                            } ?>">Collections <i
                                                     class="fa fa-angle-down nav-icon  d-lg-none d-md-block"></i></a>
                                             <div class="sub-menu mega-menu mega-menu-column-4">
                                                 <div class="list-item text-center">
@@ -169,43 +180,47 @@
                                             </div>
                                         </li>
                                         <li class="menu-item-has-children">
-                                            <a href="#" class="nav-link">Pages <i
+                                            <a href="#" class="nav-link <?php if ($PageIndex == 'pages') {
+                                                echo "active";
+                                            } else {
+                                                echo "";
+                                            } ?>">Pages <i
                                                     class="fas fa-angle-down nav-icon d-lg-none d-md-block"></i></a>
                                             <div class="sub-menu mega-menu mega-menu-column-4">
                                                 <div class="list-item">
                                                     <h4 class="title">Home Page</h4>
                                                     <ul>
-                                                        <li><a href="index-2.html">Home One</a></li>
-                                                        <li><a href="index_2.html">Home Two</a></li>
-                                                        <li><a href="index_3.html">Home Three</a></li>
+                                                        <li><a href="index.php">Home One</a></li>
+                                                        <!-- <li><a href="index_2.php">Home Two</a></li>
+                                                        <li><a href="index_3.php">Home Three</a></li> -->
                                                     </ul>
                                                     <h4 class="title">Shop Page</h4>
                                                     <ul>
-                                                        <li><a href="shop.html">Shop</a></li>
-                                                        <li><a href="shop-with-sidebar.html">Shop With Sidebar</a>
+                                                        <li><a href="shop.php">Shop</a></li>
+                                                        <li><a href="shop-with-sidebar.php">Shop With Sidebar</a>
                                                         </li>
-                                                        <li><a href="shopping-cart.html">Shopping Cart</a></li>
+                                                        <li><a href="shopping-cart.php">Shopping Cart</a></li>
                                                     </ul>
                                                 </div>
                                                 <div class="list-item">
                                                     <h4 class="title">Collection Page</h4>
                                                     <ul>
                                                         <li><a href="collections.php">Collections</a></li>
-                                                        <li><a href="all-collections.html">All Collections</a></li>
+                                                        <li><a href="all-collections.php">All Collections</a></li>
                                                     </ul>
                                                     <h4 class="title">Product Page</h4>
                                                     <ul>
-                                                        <li><a href="single-product.html">Single Product</a></li>
-                                                        <li><a href="checkout.html">Checkout</a></li>
-                                                        <li><a href="wishlist.html">Wishlist</a></li>
+                                                        <li><a href="single-product.php">Single Product</a></li>
+                                                        <li><a href="checkout.php">Checkout</a></li>
+                                                        <li><a href="wishlist.php">Wishlist</a></li>
                                                     </ul>
                                                 </div>
                                                 <div class="list-item">
                                                     <h4 class="title">Blog Page</h4>
                                                     <ul>
-                                                        <li><a href="recent-blog.html">Recent Blog</a></li>
-                                                        <li><a href="recent-blog-two.html">Recent Blog Two</a></li>
-                                                        <li><a href="single-blog.html">Single Blog</a></li>
+                                                        <li><a href="recent-blog.php">Recent Blog</a></li>
+                                                        <li><a href="recent-blog-two.php">Recent Blog Two</a></li>
+                                                        <li><a href="single-blog.php">Single Blog</a></li>
                                                     </ul>
                                                 </div>
                                                 <div class="list-item">
@@ -214,7 +229,7 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <a href="contact-us.php" class="nav-link <?php if ($PageIndex == 1) {
+                                            <a href="contact-us.php" class="nav-link <?php if ($PageIndex == 'contact') {
                                                 echo "active";
                                             } else {
                                                 echo "";
@@ -320,7 +335,7 @@
                             <div class="view-cart content" id="content">
                                 <div class="cart-title d-flex align-items-center justify-content-between">
                                     <span class="product-item">1 ITEM</span>
-                                    <a href="shopping-cart.html">View cart</a>
+                                    <a href="shopping-cart.php">View cart</a>
                                 </div>
                                 <div class="product-item d-flex justify-content-between">
                                     <div class="product-inner">

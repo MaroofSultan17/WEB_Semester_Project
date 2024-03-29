@@ -1,6 +1,8 @@
 <?php
 include ("./helper/db-config.php");
 include ("./libraries/variables.php");
+
+$PageIndex = "home";
 ;
 ?>
 <!DOCTYPE html>
@@ -30,30 +32,18 @@ include ("./libraries/variables.php");
             <div class="container d-flex align-items-center justify-content-between">
                 <div class="top-bar-contact d-flex align-items-center">
                     <ul class="d-flex align-items-center">
-                        <li><a href="#"><i class="fa-solid fa-phone"></i>+123 456 7890</a></li>
-                        <li><a href="#"><i class="fa-regular fa-envelope"></i>hello@evani.com</a></li>
-                        <li><a href="#"><i class="fa-sharp fa-solid fa-location-dot"></i>Locate Our Shop</a></li>
+                        <li><a href="#"><i class="fa-solid fa-phone"></i>
+                                <?php echo constant('siteContact'); ?>
+                            </a></li>
+                        <li><a href="#"><i class="fa-regular fa-envelope"></i>
+                                <?php echo constant('siteEmail'); ?>
+                            </a></li>
+                        <li><a href="#"><i class="fa-sharp fa-solid fa-location-dot"></i>
+                                <?php echo constant('address'); ?>
+                            </a></li>
                     </ul>
                 </div>
                 <div class="top-bar-social d-flex align-items-center">
-                    <ul class="view-switcher d-flex align-items-center">
-                        <li>
-                            <span>usd<i class="fa-solid fa-angle-down"></i></span>
-                            <ul class="evani-curency">
-                                <li><a href="#">euro</a></li>
-                                <li><a href="#">tk</a></li>
-                                <li><a href="#">usd</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <span>en<i class="fa-solid fa-angle-down"></i></span>
-                            <ul class="evani-curency">
-                                <li><a href="#">english</a></li>
-                                <li><a href="#">bangla</a></li>
-                                <li><a href="#">jerman</a></li>
-                            </ul>
-                        </li>
-                    </ul>
                     <ul class="social-icon d-flex align-items-center">
                         <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a></li>
                         <li><a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a></li>
@@ -274,30 +264,11 @@ include ("./libraries/variables.php");
                                         <a href="#" class="nav-link">Pages <i class="fas fa-angle-down"></i></a>
                                         <div class="sub-menu mega-menu mega-menu-column-4">
                                             <div class="list-item">
-                                                <h4 class="title">Home Page</h4>
-                                                <ul>
-                                                    <li><a href="index-2.php">Home One</a></li>
-                                                    <li><a href="index_2.php">Home Two</a></li>
-                                                    <li><a href="index_3.php">Home Three</a></li>
-                                                </ul>
                                                 <h4 class="title">Shop Page</h4>
                                                 <ul>
                                                     <li><a href="shop.php">Shop</a></li>
                                                     <li><a href="shop-with-sidebar.php">Shop With Sidebar</a></li>
                                                     <li><a href="shopping-cart.php">Shopping Cart</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="list-item">
-                                                <h4 class="title">Collection Page</h4>
-                                                <ul>
-                                                    <li><a href="collections.php">Collections</a></li>
-                                                    <li><a href="all-collections.php">All Collections</a></li>
-                                                </ul>
-                                                <h4 class="title">Product Page</h4>
-                                                <ul>
-                                                    <li><a href="single-product.php">Single Product</a></li>
-                                                    <li><a href="checkout.php">Checkout</a></li>
-                                                    <li><a href="wishlist.php">Wishlist</a></li>
                                                 </ul>
                                             </div>
                                             <div class="list-item">
@@ -309,8 +280,23 @@ include ("./libraries/variables.php");
                                                 </ul>
                                             </div>
                                             <div class="list-item">
-                                                <img src="images/header/product/shape-1.png" alt="header">
+                                                <h4 class="title">Blog Page</h4>
+                                                <ul>
+                                                    <li><a href="recent-blog.php">Recent Blog</a></li>
+                                                    <li><a href="recent-blog-two.php">Recent Blog Two</a></li>
+                                                    <li><a href="single-blog.php">Single Blog</a></li>
+                                                </ul>
                                             </div>
+                                            <div class="list-item">
+                                                <h4 class="title">Collection Page</h4>
+                                                <ul>
+                                                    <li><a href="collections.php">Collections</a></li>
+                                                    <li><a href="all-collections.php">All Collections</a></li>
+                                                </ul>
+                                            </div>
+                                            <!-- <div class="list-item">
+                                                <img src="images/header/product/shape-1.png" alt="header">
+                                            </div> -->
                                         </div>
                                     </li>
                                     <li>
@@ -551,7 +537,7 @@ include ("./libraries/variables.php");
         <div class="container">
             <div class="ev-top-content">
                 <span>Grab Yours Now</span>
-                <h2 style="text-align: center;">Don't Miss Out on Our Sale</h2>
+                <h2 style="text-align: center;">Don't Miss Out <br> on Our Sale</h2>
                 <p>Turn up the savings! Shop now for irresistible deals.</p>
             </div>
             <div class="menu-fulter">

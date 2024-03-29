@@ -1,7 +1,7 @@
 <?php include ("./libraries/variables.php"); ?>
 <?php
 
-$PageIndex = 1;
+$PageIndex = "contact";
 
 ?>
 <!DOCTYPE html>

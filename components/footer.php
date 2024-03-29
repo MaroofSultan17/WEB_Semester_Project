@@ -1,4 +1,4 @@
-<footer class="footer-section">
+<footer class="footer-section" style="background: #eae7dd;">
     <div class="container">
         <div class="row">
             <div class="col-xl-3 col-md-6 col-sm-6 col-12 d-flex justify-content-between">

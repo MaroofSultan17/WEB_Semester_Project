@@ -1,7 +1,15 @@
+<?php
+include ("./libraries/variables.php");
+$PageIndex = "shop";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <title>Shop |
+        <?php echo (constant('siteTitle')); ?>
+    </title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,7 +37,7 @@
         <div class="container-fluid">
             <div class="ev-hero-content">
                 <h2>Shop</h2>
-                <span><a href="index-2.php">Home</a> > Shop</span>
+                <span><a href="index.php">Home</a> > Shop</span>
             </div>
         </div>
     </section>
