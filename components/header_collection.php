@@ -33,10 +33,10 @@
                     </li> -->
                 </ul>
                 <ul class="social-icon d-flex align-items-center" style="padding:10px;">
-                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a></li>
-                    <li><a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a></li>
-                    <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                    <li><a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href="<?php echo constant('facebook'); ?>"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="<?php echo constant('twitter'); ?>"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="<?php echo constant('linkedin'); ?>"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    <li><a href="<?php echo constant('youtube'); ?>"><i class="fa-brands fa-youtube"></i></a></li>
                 </ul>
             </div>
 
@@ -266,7 +266,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a class="log-in header-popup log-in-btn d-flex align-items-center" id="header-popup1"
                                 href="#"><span class="log-in-text">log in</span><i class="fa-solid fa-user"></i></a>
                             <div class="popup-wraper1">
@@ -274,7 +274,7 @@
                                     <label class="close-btn fas fa-times popup-label"></label>
                                     <h6>Login</h6>
 
-                                    <form action="https://ethemestudio.com/demo/evani/login.php" method="POST">
+                                    <form action="#" method="POST">
                                         <div class="d-block">
                                             <label>Username:</label>
                                             <input type="text" name="username" required>
@@ -327,7 +327,7 @@
                                     </form>
                                 </div>
                             </div>
-                        </li>
+                        </li> -->
                         <li><a href="#"><i class="fa-solid fa-heart"></i></a></li>
                         <li class="product-cart">
                             <a href="#" class="cart-icon" id="toggleButton"><i

@@ -25,11 +25,15 @@
                     </div>
                     <div class="widgets-social">
                         <ul class="d-flex align-items-center">
-                            <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a></li>
-                            <li><a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a></li>
-                            <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <li><a href="<?php echo constant('facebook'); ?>"><i
+                                        class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="<?php echo constant('twitter'); ?>"><i class="fa-brands fa-twitter"></i></a>
                             </li>
-                            <li><a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a></li>
+                            <li><a href="<?php echo constant('linkedin'); ?>"><i
+                                        class="fa-brands fa-linkedin-in"></i></a>
+                            </li>
+                            <li><a href="<?php echo constant('youtube'); ?>"><i class="fa-brands fa-youtube"></i></a>
+                            </li>
                         </ul>
                     </div>
                 </div>

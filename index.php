@@ -1109,70 +1109,44 @@ $PageIndex = "home";
             </div>
             <div class="swiper testimonial-slider testimonial-items">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide single-testimonial">
-                        <div class="testimonial-author d-flex align-items-center justify-content-between">
-                            <div class="author-bio d-flex align-items-center">
-                                <div class="author-img">
-                                    <img src="images/index-1/testimonial/author-1.png" alt="testimonial">
+                    <?php
+                    $Query = "SELECT * FROM review LEFT JOIN customer ON review.cid = customer.cid";
+                    $result = mysqli_query($conn, $Query);
+                    if ($result->num_rows > 0) {
+                        while ($row = mysqli_fetch_array($result)) {
+                            ?>
+                            <div class="swiper-slide single-testimonial">
+                                <div class="testimonial-author d-flex align-items-center justify-content-between">
+                                    <div class="author-bio d-flex align-items-center">
+                                        <div class="author-img">
+                                            <img src="<?php echo $row['authorimage']; ?>" alt="testimonial">
+                                        </div>
+                                        <div class="author-text">
+                                            <h6>
+                                                <?php echo strtoupper($row['fullname']); ?>
+                                            </h6>
+                                            <span>
+                                                <?php echo $row['subject']; ?>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="quote-icon">
+                                        <img src="<?php echo $row['quoteimage']; ?>" alt="testimonial">
+                                    </div>
                                 </div>
-                                <div class="author-text">
-                                    <h6>Sharmin Eity</h6>
-                                    <span>Journalist</span>
-                                </div>
-                            </div>
-                            <div class="quote-icon">
-                                <img src="images/index-1/testimonial/quot/shape-1.png" alt="testimonial">
-                            </div>
-                        </div>
-                        <div class="testimonial-text">
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt ming
-                                elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide single-testimonial">
-                        <div class="testimonial-author d-flex align-items-center justify-content-between">
-                            <div class="author-bio d-flex align-items-center">
-                                <div class="author-img">
-                                    <img src="images/index-1/testimonial/author-2.png" alt="testimonial">
-                                </div>
-                                <div class="author-text">
-                                    <h6>Tom Anderson</h6>
-                                    <span>Web Developer</span>
-                                </div>
-                            </div>
-                            <div class="quote-icon">
-                                <img src="images/index-1/testimonial/quot/shape-2.png" alt="testimonial">
-                            </div>
-                        </div>
-                        <div class="testimonial-text">
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt ming
-                                elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide single-testimonial">
-                        <div class="testimonial-author d-flex align-items-center justify-content-between">
-                            <div class="author-bio d-flex align-items-center">
-                                <div class="author-img">
-                                    <img src="images/index-1/testimonial/author-3.png" alt="testimonial">
-                                </div>
-                                <div class="author-text">
-                                    <h6>Nayna Eva</h6>
-                                    <span>Photographer</span>
+                                <div class="testimonial-text">
+                                    <p>
+                                        <?php echo $row['description']; ?>
+                                    </p>
                                 </div>
                             </div>
-                            <div class="quote-icon">
-                                <img src="images/index-1/testimonial/quot/shape-3.png" alt="testimonial">
-                            </div>
-                        </div>
-                        <div class="testimonial-text">
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt ming
-                                elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide single-testimonial">
+
+                        <?php }
+                    } else {
+                        echo "Data Not FOund";
+                    }
+                    ?>
+                    <!-- <div class="swiper-slide single-testimonial">
                         <div class="testimonial-author d-flex align-items-center justify-content-between">
                             <div class="author-bio d-flex align-items-center">
                                 <div class="author-img">
@@ -1276,7 +1250,7 @@ $PageIndex = "home";
                                 elit, sed do eiusmod tempor incididunt
                                 ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
                         </div>
-                    </div>
+                    </div>  -->
                 </div>
                 <div class="swiper-button-next hero-slide-btn testimonial-slide-btn">
                     <i class="fa-solid fa-arrow-right"></i>

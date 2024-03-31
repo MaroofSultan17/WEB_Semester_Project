@@ -14,7 +14,7 @@ if (isset($_REQUEST["submit"])) {
     $TokenKey = str_shuffle($TokenKey);
     $TokenKey = substr($TokenKey, 0, 32);
 
-    $Query = "SELECT MAX(id) FROM signup";
+    $Query = "SELECT MAX(id) FROM customer";
     // echo $Query;
     // die();
 
@@ -30,7 +30,7 @@ if (isset($_REQUEST["submit"])) {
     $Status = 0;
     $IP = $_SERVER['REMOTE_ADDR'];
 
-    $InsertQuery = "INSERT INTO signup(id, fullname, email, contact, password, status, ipaddress, token, " .
+    $InsertQuery = "INSERT INTO customer(id, fullname, email, contact, password, status, ipaddress, token, " .
         " refference) VALUES ($UserID, '$FullName', '$Email', '$Contact', '$Password', '$Status', '$IP', '$TokenKey', '$Reference')";
 
     // echo $InsertQuery;

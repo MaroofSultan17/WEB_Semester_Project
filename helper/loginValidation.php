@@ -4,7 +4,7 @@ if (isset($_REQUEST["submit"])) {
     $fullName = mysqli_real_escape_string($conn, $_POST['fullname']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
 
-    $query = "SELECT fullname, password FROM signup WHERE fullname = ?";
+    $query = "SELECT fullname, password FROM customer WHERE fullname = ?";
     $stmt = mysqli_prepare($conn, $query);
     mysqli_stmt_bind_param($stmt, "s", $fullName);
     mysqli_stmt_execute($stmt);
