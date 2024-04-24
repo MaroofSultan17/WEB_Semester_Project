@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <!-- Title -->
 	<title>Uena - Django Restaurant Admin Dashboard Template </title>
@@ -24,12 +25,12 @@
 
 	<!-- Favicon icon -->
 	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
-	
-	<link rel="stylesheet" href="vendor/chartist/css/chartist.min.css">
-    <link href="vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/select2/css/select2.min.css">
+    	<link href="vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
     <link class="main-css" href="css/style.css" rel="stylesheet">
-	
+
 </head>
+
 <body>
 
     <!--*******************
@@ -45,6 +46,7 @@
     <!--*******************
         Preloader end
     ********************-->
+
 
     <!--**********************************
         Main wrapper start
@@ -573,8 +575,11 @@
 		<!--**********************************
             Chat box End
         ***********************************-->
+
+
 		
-		<!--**********************************
+		
+        <!--**********************************
             Header start
         ***********************************-->
         <div class="header">
@@ -583,7 +588,7 @@
                     <div class="collapse navbar-collapse justify-content-between">
                         <div class="header-left">
                             <div class="dashboard_bar">
-                                Dashboard
+                                UC Select 2
                             </div>
                         </div>
 
@@ -799,6 +804,7 @@
 						</a>
                         <ul aria-expanded="false">
 							<li><a href="index.php">Dashboard Light</a></li>
+							<li><a href="index-2.php">Dashboard Dark</a></li>
 							<li><a href="orders-list.php">Orders list</a></li>
 							<li><a href="order-detail.php">Order Detail</a></li>
 							<li><a href="customer-list.php">Customers</a></li>
@@ -974,458 +980,710 @@
         <!--**********************************
             Sidebar end
         ***********************************-->
-		
-		<!--**********************************
+
+        <!--**********************************
             Content body start
         ***********************************-->
         <div class="content-body">
-            <!-- row -->
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-xl-3 col-xxl-4">
-						<div class="row">
-							<div class="col-xl-12 col-lg-6 col-md-6">
-								<div class="card">
-									<div class="card-header border-0 pb-0">
-										<div class="separator"></div>
-										<div class="me-auto">
-											<h4 class="card-title mb-2">Daily Target Income</h4>
-											<p class="fs-12 mb-0">Lorem ipsum dolor sit</p>
-										</div>
-									</div>
-									<div class="card-body  text-center">
-										<div id="radialChart"></div>
-										<h3 class="fs-28 text-black font-w500">$749.56</h3>
-										<span class="mb-3 d-block">from $1,000</span>
-										<p class="fs-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </p>
-										<a href="post-details.php" class="btn btn-outline-primary">More Details</a>
-									</div>
-								</div>
-							</div>
-							<div class="col-xl-12 col-lg-6 col-md-6">
-								<div class="card trending-menus">
-									<div class="card-header border-0">
-										<div class="separator"></div>
-										<div class="me-auto">	
-											<h4 class="text-black fs-20">Daily Trending Menus</h4>
-											<p class="fs-13 mb-0">Lorem ipsum dolor</p>
-										</div>	
-										
-									</div>
-									<div class="card-body px-0">
-										<div class="dz-scroll height500 px-4" id="tredingMenus">
-											<div class="d-flex pb-3 mb-3 tr-row align-items-center border-bottom">
-												<span class="num">#1</span>
-												<div class="me-auto pe-3">
-													<a href="post-details.php"><h2 class="text-black fs-14 font-w500">Chicken curry special with cucumber</h2></a>
-													<span class="text-black font-w600 d-inline-block me-3">$5.6 </span> <span class="fs-14">Order 89x</span>
-												</div>
-												<img src="images/menu/Untitled-1.jpg" alt="/">
-											</div>
-											<div class="d-flex pb-3 mb-3 tr-row align-items-center border-bottom">
-												<span class="num">#2</span>
-												<div class="me-auto pe-3">
-													<a href="post-details.php"><h2 class="text-black fs-14 font-w500">Italiano Pizza With Garlic</h2></a>
-													<span class="text-black font-w600 d-inline-block me-3">$5.6 </span> <span class="fs-14">Order 89x</span>
-												</div>
-												<img src="images/menu/Untitled-2.jpg" alt="/">
-											</div>
-											<div class="d-flex pb-3 mb-3 tr-row align-items-center border-bottom">
-												<span class="num">#3</span>
-												<div class="me-auto pe-3">
-													<a href="post-details.php"><h2 class="text-black fs-14 font-w500">Watermelon juice with ice</h2></a>
-													<span class="text-black font-w600 d-inline-block me-3">$5.6 </span> <span class="fs-14">Order 89x</span>
-												</div>
-												<img src="images/menu/Untitled-3.jpg" alt="/">
-											</div>
-											<div class="d-flex pb-3 mb-3  tr-row align-items-center border-bottom">
-												<span class="num">#4</span>
-												<div class="me-auto pe-3">
-													<a href="post-details.php"><h2 class="text-black fs-14 font-w500">Tuna Soup spinach with himalaya salt</h2></a>
-													<span class="text-black font-w600 d-inline-block me-3">$5.6 </span> <span class="fs-14">Order 89x</span>
-												</div>
-												<img src="images/menu/Untitled-4.jpg" alt="/">
-											</div>
-											<div class="d-flex pb-3 mb-3 tr-row align-items-center">
-												<span class="num">#5</span>
-												<div class="me-auto pe-3">
-													<a href="post-details.php"><h2 class="text-black fs-14 font-w500">Medium Spicy Spagethi Italiano</h2></a>
-													<span class="text-black font-w600 d-inline-block me-3">$5.6 </span> <span class="fs-14">Order 89x</span>
-												</div>
-												<img src="images/menu/Untitled-5.jpg" alt="/">
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-xl-9 col-xxl-8">
-						<div class="row">
-							<div class="col-xl-4 col-xxl-6 col-sm-6">
-								<div class="card">
-									<div class="card-header media border-0 pb-0">
-										<div class="media-body d-flex">
-											<div class="me-4 mt-1">
-												<svg class="card-ico" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M3.10333 12.25H4.66666V19.8333C4.66666 20.6069 4.97395 21.3487 5.52093 21.8957C6.06791 22.4427 6.80978 22.75 7.58333 22.75H8.74999C9.52354 22.75 10.2654 22.4427 10.8124 21.8957C11.3594 21.3487 11.6667 20.6069 11.6667 19.8333V12.25H13.23C13.7436 12.25 14.2362 12.0459 14.5994 11.6827C14.9626 11.3195 15.1667 10.8269 15.1667 10.3133C15.1683 9.94246 15.0608 9.57933 14.8575 9.26914L10.4533 2.41498C10.2072 2.03206 9.86883 1.71709 9.4693 1.49895C9.06977 1.28082 8.62186 1.1665 8.16666 1.1665C7.71146 1.1665 7.26355 1.28082 6.86401 1.49895C6.46448 1.71709 6.12613 2.03206 5.87999 2.41498L1.47583 9.26914C1.27256 9.57933 1.16504 9.94246 1.16666 10.3133C1.16666 10.8269 1.3707 11.3195 1.7339 11.6827C2.09709 12.0459 2.58969 12.25 3.10333 12.25Z" fill="#FF720D"/>
-												<path d="M24.8966 15.75H23.3333V8.16667C23.3333 7.39312 23.026 6.65125 22.479 6.10427C21.932 5.55729 21.1902 5.25 20.4166 5.25H19.25C18.4764 5.25 17.7346 5.55729 17.1876 6.10427C16.6406 6.65125 16.3333 7.39312 16.3333 8.16667V15.75H14.77C14.5156 15.75 14.2638 15.8001 14.0288 15.8974C13.7939 15.9947 13.5804 16.1374 13.4005 16.3172C13.2207 16.4971 13.078 16.7106 12.9807 16.9455C12.8834 17.1805 12.8333 17.4323 12.8333 17.6867C12.8317 18.0575 12.9392 18.4206 13.1425 18.7308L17.5466 25.585C17.7928 25.9679 18.1311 26.2829 18.5307 26.501C18.9302 26.7192 19.3781 26.8335 19.8333 26.8335C20.2885 26.8335 20.7364 26.7192 21.1359 26.501C21.5355 26.2829 21.8738 25.9679 22.12 25.585L26.5241 18.7308C26.7274 18.4206 26.8349 18.0575 26.8333 17.6867C26.8333 17.4323 26.7832 17.1805 26.6859 16.9455C26.5886 16.7106 26.4459 16.4971 26.2661 16.3172C26.0862 16.1374 25.8727 15.9947 25.6378 15.8974C25.4028 15.8001 25.151 15.75 24.8966 15.75Z" fill="#FF720D"/>
-												</svg>
-											</div>
-											<div>
-												<h2 class="text-black fs-32 font-w600 mb-0">892 <span class="text-success fs-18 font-w500">+2,7%</span></h2>
-												<p class="mb-0 text-black font-w500">Orders</p>
-											</div>	
-										</div>
-									</div>
-									<div class="card-body p-0">
-										<div id="widgetChart1" class="dashboard-chart"></div>
-									</div>
-								</div>
-							</div>
-							<div class="col-xl-4 col-xxl-6 col-sm-6">
-								<div class="card">
-									<div class="card-header media border-0 pb-0">
-										<div class="media-body d-flex">
-											<div class="me-4 mt-1">
-												<svg class="card-ico" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M14.4608 12.0692C17.0158 9.47919 16.835 5.09253 14.0816 2.72419C11.5733 0.56586 7.67079 0.711693 5.32579 3.12086C3.06246 5.44253 2.95163 9.12919 4.87079 11.5442C7.15746 14.4259 11.7716 14.7875 14.4608 12.0692Z" fill="#FF720D"/>
-													<path d="M4.08329 26.8334H15.75C17.78 26.8334 18.6958 25.025 18.7191 23.2342C18.7541 20.615 17.7216 17.9259 15.7091 16.1992C12.0866 13.0025 6.55663 13.3409 3.35996 16.9634C1.60996 18.9467 1.16663 21.3559 1.16663 23.9167C1.16663 25.5267 2.47329 26.8334 4.08329 26.8334Z" fill="#FF720D"/>
-													<path d="M25.0833 7.58333C25.0891 2.94 19.5999 0.145831 15.8374 2.85833C18.0541 5.6175 18.0541 9.54916 15.8374 12.3083C15.7849 12.3725 16.9983 12.9092 17.0916 12.9442C20.7024 14.4433 25.0774 11.5208 25.0833 7.58333Z" fill="#FF720D"/>
-													<path d="M19.25 13.4167C17.8908 13.4167 16.555 13.79 15.3825 14.4842C15.5983 14.3559 16.9808 15.7909 17.15 15.9775C18.8416 17.78 19.8333 20.2592 19.8333 22.75V23.9167C19.8333 24.7508 19.5766 25.5675 19.0983 26.25H23.9166C25.5266 26.25 26.8333 24.9433 26.8333 23.3333C26.8333 21.2625 26.9383 19.2617 25.9175 17.3833C25.0891 15.8609 23.7358 14.6475 22.1375 13.9825C21.2216 13.6092 20.2358 13.4167 19.25 13.4167Z" fill="#FF720D"/>
-												</svg>
-											</div>
-											<div>
-												<h2 class="text-black fs-32 font-w600 mb-0">9,334 <span class="text-danger fs-18 font-w500">-0,5%</span></h2>
-												<p class="mb-0 text-black font-w500">Customers</p>
-											</div>	
-										</div>
-									</div>
-									<div class="card-body p-0">
-										<div id="widgetChart2" class="dashboard-chart"></div>
-									</div>
-								</div>
-							</div>
-							<div class="col-xl-4 col-xxl-12">
-								<div class="card">
-									<div class="card-header media border-0 pb-0">
-										<div class="media-body d-flex">
-											<div class="me-4 mt-1">
-												<svg class="card-ico" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M23.9167 10.5H4.08335C2.47252 10.5 1.16669 11.8058 1.16669 13.4167V14.5833C1.16669 16.1942 2.47252 17.5 4.08335 17.5H23.9167C25.5275 17.5 26.8334 16.1942 26.8334 14.5833V13.4167C26.8334 11.8058 25.5275 10.5 23.9167 10.5Z" fill="#FF720D"/>
-													<path d="M23.9167 19.8334H4.08335C2.47252 19.8334 1.16669 21.1392 1.16669 22.75V23.9167C1.16669 25.5275 2.47252 26.8334 4.08335 26.8334H23.9167C25.5275 26.8334 26.8334 25.5275 26.8334 23.9167V22.75C26.8334 21.1392 25.5275 19.8334 23.9167 19.8334Z" fill="#FF720D"/>
-													<path d="M23.9167 1.16669H4.08335C2.47252 1.16669 1.16669 2.47252 1.16669 4.08335V5.25002C1.16669 6.86085 2.47252 8.16669 4.08335 8.16669H23.9167C25.5275 8.16669 26.8334 6.86085 26.8334 5.25002V4.08335C26.8334 2.47252 25.5275 1.16669 23.9167 1.16669Z" fill="#FF720D"/>
-												</svg>
-											</div>
-											<div>
-												<h2 class="text-black fs-32 font-w600 mb-0">524</h2>
-												<p class="mb-0 text-black font-w500">Menu</p>
-											</div>	
-										</div>
-									</div>
-									<div class="card-body p-0">
-										<div id="widgetChart3" class="dashboard-chart"></div>
-									</div>
-								</div>
-							</div>
-							<div class="col-xl-12">
-								<div class="card">
-									<div class="card-header pb-0 flex-wrap border-0">
-										<div class="separator mb-3"></div>
-										<div class="me-auto mb-3">
-											<h4 class="text-black fs-20">Customer Map</h4>
-											<p class="fs-13 mb-0">Lorem ipsum dolor sit amet, consectetur</p>
-										</div>	
-										
-										<div class="d-flex mb-3">
-											<div class="custom-control form-check form-switch toggle-switch text-sm-end me-sm-4 me-2">
-												<input type="checkbox" class="form-check-input" id="customSwitch11">
-												<label class="form-check-label fs-14 text-black" for="customSwitch11">Number</label>
-											</div>
-											<div class="custom-control form-check form-switch toggle-switch text-sm-end me-sm-4 me-2">
-												<input type="checkbox" class="form-check-input" id="customSwitch12">
-												<label class="form-check-label fs-14 text-black" for="customSwitch12">Analytics</label>
-											</div>
-										</div>
-										<div class="card-tabs mb-3">
-											<ul class="nav nav-tabs" role="tablist">
-												<li class="nav-item">
-													<a class="nav-link active" data-bs-toggle="tab" href="#Monthly" role="tab">
-														Monthly	
-													</a>
-												</li>
-												<li class="nav-item">
-													<a class="nav-link " data-bs-toggle="tab" href="#Weekly" role="tab">
-														Weekly
-													</a>
-												</li>
-												<li class="nav-item">
-													<a class="nav-link" data-bs-toggle="tab" href="#Today" role="tab">
-														Today
-													</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-									<div class="card-body tab-content pb-0">
-										<div class="tab-pane fade active show" id="Monthly">
-											<div id="customerMap" class="customer-chart"></div>
-										</div>
-										<div class="tab-pane fade" id="Weekly">
-											<div id="customerMap2" class="customer-chart"></div>
-										</div>
-										<div class="tab-pane fade" id="Today">
-											<div id="customerMap3" class="customer-chart"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-xl-12">
-								<div class="card">
-									<div class="card-header border-0 flex-wrap pb-0">
-										<div class="d-flex mb-3">
-											<div class="separator"></div>
-											<div class="me-auto">
-												<h4 class="text-black fs-20">Recent Order Request</h4>
-												<p class="fs-13 mb-0">Lorem ipsum dolor</p>
-											</div>	
-										</div>
-										<select class="form-control style-1 default-select mb-3">
-											<option>Newest</option>
-											<option>Oldest</option>
-										</select>
-									</div>
-									<div class="card-body p-0">
-										<div class="table-responsive">
-											<table class="table order-request">
-												<tbody class="loadmore-content" id="orderRequestContent">
-													<tr>
-														<td>
-															<div class="media align-items-center">
-																<img class="me-3 " width="87" src="images/card/Untitled-1.jpg" alt="DexignZone">
-																<div class="media-body">
-																	<h5 class="mt-0 mb-2"><a class="text-black" href="ecom-product-detail.php">Sweet Cheezy Pizza for Kids Meal (Small Size)</a></h5>
-																	<p class="mb-0 text-primary">#0010235</p>
-																</div>
-															</div>
-														</td>
-														<td>
-															<h5 class="mb-2 text-black wspace-no">Peter Parkur</h5>
-															<p class="mb-0">South Corner st41256 london</p>
-														</td>
-														<td>
-															<div class="d-flex align-items-center justify-content-center">
-																<h4 class="mb-0 me-3 fs-20 text-black d-inline-block">$7.4</h4>
-																<p class="mb-0 fs-20 d-inline-block">x3</p>
-															</div>
-														</td>
-														<td>
-															<div class="d-flex align-items-center">
-																<a class="btn text-warning" href="javascript:void(0);">PENDING</a>
-																<div class="dropdown ms-auto">
-																	<a class="btn-link" data-bs-toggle="dropdown">
-																		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="12" cy="5" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="19" r="2"></circle></g></svg>
-																	</a>
-																	<div class="dropdown-menu dropdown-menu-end">
-																		<a class="dropdown-item text-black" href="javascript:void(0);">
-																		Accept order
-																		</a>
-																		<a class="dropdown-item text-black" href="javascript:void(0);">
-																		Reject order
-																		</a>
-																		<a class="dropdown-item text-black" href="javascript:void(0);">
-																		View Details
-																		</a>
-																	</div>
-																</div>
-															</div>
-														</td>
-													</tr>
-													<tr>
-														<td>
-															<div class="media align-items-center">
-																<img class="me-3 " width="87" src="images/card/Untitled-2.jpg" alt="DexignZone">
-																<div class="media-body">
-																	<h5 class="mt-0 mb-2"><a class="text-black" href="ecom-product-detail.php">Tuna soup spinach with himalaya salt</a></h5>
-																	<p class="mb-0 text-primary">#0010235</p>
-																</div>
-															</div>
-														</td>
-														<td>
-															<h5 class="mb-2 text-black wspace-no">Jimmy Kueai</h5>
-															<p class="mb-0">South Corner St.41256 London</p>
-														</td>
-														<td>
-															<div class="d-flex align-items-center justify-content-center">
-																<h4 class="mb-0 me-3 fs-20 text-black d-inline-block">$7.4</h4>
-																<p class="mb-0 fs-20 d-inline-block">x3</p>
-															</div>
-														</td>
-														<td>
-															<div class="d-flex align-items-center">
-																<a class="btn text-warning" href="javascript:void(0);">PENDING</a>
-																<div class="dropdown ms-auto">
-																	<div class="btn-link" data-bs-toggle="dropdown">
-																		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="12" cy="5" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="19" r="2"></circle></g></svg>
-																	</div>
-																	<div class="dropdown-menu dropdown-menu-end">
-																		<a class="dropdown-item text-black" href="javascript:void(0);">
-																		Accept order
-																		</a>
-																		<a class="dropdown-item text-black" href="javascript:void(0);">
-																		Reject order
-																		</a>
-																		<a class="dropdown-item text-black" href="javascript:void(0);">
-																		View Details
-																		</a>
-																	</div>
-																</div>
-															</div>
-														</td>
-													</tr>
-													<tr>
-														<td>
-															<div class="media align-items-center">
-																<img class="me-3 " width="87" src="images/card/Untitled-3.jpg" alt="DexignZone">
-																<div class="media-body">
-																	<h5 class="mt-0 mb-2"><a class="text-black" href="ecom-product-detail.php">Extreme Deluxe Pizza Mozarella with Garlic</a></h5>
-																	<p class="mb-0 text-primary">#0010235</p>
-																</div>
-															</div>
-														</td>
-														<td>
-															<h5 class="mb-2 text-black wspace-no">Cindy Alexa</h5>
-															<p class="mb-0">Blue Ocean St.41551 London</p>
-														</td>
-														<td>
-															<div class="d-flex align-items-center justify-content-center">
-																<h4 class="mb-0 me-3 fs-20 text-black d-inline-block">$8.2</h4>
-																<p class="mb-0 fs-20 d-inline-block">x1</p>
-															</div>
-														</td>
-														<td>
-															<div class="d-flex align-items-center">
-																<a class="btn text-success" href="javascript:void(0);">DELIVERED</a>
-																<div class="dropdown ms-auto">
-																	<div class="btn-link" data-bs-toggle="dropdown">
-																		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="12" cy="5" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="19" r="2"></circle></g></svg>
-																	</div>
-																	<div class="dropdown-menu dropdown-menu-end">
-																		<a class="dropdown-item text-black" href="javascript:void(0);">
-																		Accept order
-																		</a>
-																		<a class="dropdown-item text-black" href="javascript:void(0);">
-																		Reject order
-																		</a>
-																		<a class="dropdown-item text-black" href="javascript:void(0);">
-																		View Details
-																		</a>
-																	</div>
-																</div>
-															</div>
-														</td>
-													</tr>
-													<tr>
-														<td>
-															<div class="media align-items-center">
-																<img class="me-3 " width="87" src="images/card/Untitled-1.jpg" alt="DexignZone">
-																<div class="media-body">
-																	<h5 class="mt-0 mb-2"><a class="text-black" href="ecom-product-detail.php">Mozarella Pizza With Random Topping</a></h5>
-																	<p class="mb-0 text-primary">#0010235</p>
-																</div>
-															</div>
-														</td>
-														<td>
-															<h5 class="mb-2 text-black wspace-no">Cindy Alexa</h5>
-															<p class="mb-0">Blue Ocean St.41551 London</p>
-														</td>
-														<td>
-															<div class="d-flex align-items-center justify-content-center">
-																<h4 class="mb-0 me-3 fs-20 text-black d-inline-block">$8.2</h4>
-																<p class="mb-0 fs-20 d-inline-block">x1</p>
-															</div>
-														</td>
-														<td>
-															<div class="d-flex align-items-center">
-																<a class="btn text-light" href="javascript:void(0);">CANCELED</a>
-																<div class="dropdown ms-auto">
-																	<div class="btn-link" data-bs-toggle="dropdown">
-																		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="12" cy="5" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="19" r="2"></circle></g></svg>
-																	</div>
-																	<div class="dropdown-menu dropdown-menu-end">
-																		<a class="dropdown-item text-black" href="javascript:void(0);">
-																		Accept order
-																		</a>
-																		<a class="dropdown-item text-black" href="javascript:void(0);">
-																		Reject order
-																		</a>
-																		<a class="dropdown-item text-black" href="javascript:void(0);">
-																		View Details
-																		</a>
-																	</div>
-																</div>
-															</div>
-														</td>
-													</tr>
-													<tr>
-														<td>
-															<div class="media align-items-center">
-																<img class="me-3 " width="87" src="images/card/Untitled-2.jpg" alt="DexignZone">
-																<div class="media-body">
-																	<h5 class="mt-0 mb-2"><a class="text-black" href="ecom-product-detail.php">Tuna soup spinach with himalaya salt</a></h5>
-																	<p class="mb-0 text-primary">#0010235</p>
-																</div>
-															</div>
-														</td>
-														<td>
-															<h5 class="mb-2 text-black wspace-no">Jimmy Kueai</h5>
-															<p class="mb-0">Blue Ocean St.41551 London</p>
-														</td>
-														<td>
-															<div class="d-flex align-items-center justify-content-center">
-																<h4 class="mb-0 me-3 fs-20 text-black d-inline-block">$7.4</h4>
-																<p class="mb-0 fs-20 d-inline-block">x1</p>
-															</div>
-														</td>
-														<td>
-															<div class="d-flex align-items-center">
-																<a class="btn text-success" href="javascript:void(0);">DELIVERED</a>
-																<div class="dropdown ms-auto">
-																	<div class="btn-link" data-bs-toggle="dropdown">
-																		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="12" cy="5" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="19" r="2"></circle></g></svg>
-																	</div>
-																	<div class="dropdown-menu dropdown-menu-end">
-																		<a class="dropdown-item text-black" href="javascript:void(0);">
-																		Accept order
-																		</a>
-																		<a class="dropdown-item text-black" href="javascript:void(0);">
-																		Reject order
-																		</a>
-																		<a class="dropdown-item text-black" href="javascript:void(0);">
-																		View Details
-																		</a>
-																	</div>
-																</div>
-															</div>
-														</td>
-													</tr>
-												</tbody>
-											</table>
-											<div class="card-footer border-0 pt-0 text-center">
-												<a href="javascript:void(0);" class="btn btn-outline-primary dz-load-more" id="orderRequest" rel="ajax/order-request.php">View More</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+            <div class="container-fluid">
+                <div class="row page-titles mx-0">
+                    <div class="col-sm-6 p-md-0">
+                        <div class="welcome-text">
+                            <h4>Hi, welcome back!</h4>
+                            <p class="mb-0">Your business dashboard template</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="javascript:void(0)">Plugins</a></li>
+                            <li class="breadcrumb-item active"><a href="javascript:void(0)">Select2</a></li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <h4 class="card-title">Single select boxes</h4>
+                                    <p>Select2 can take a regular select box like this...</p>
+                                </div>
+
+                                <select id="single-select" style="width:100%;">
+                                    <option value="AL">Alabama</option>
+                                    <option value="WY">Wyoming</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <h4 class="card-title">Multi-select boxes</h4>
+                                    <p>Select2 also supports multi-value select boxes. The select below is declared with the multiple <mark class="text-primary">attribute</mark>.</p>
+                                </div>
+                                <select class="multi-select" style="width:100%;" name="states[]" multiple="multiple">
+                                    <option value="AL">Alabama</option>
+                                    <option value="WY">Wyoming</option>
+                                    <option value="UI">dlf</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <h4 class="card-title">Dropdown option groups</h4>
+                                    <p>In HTML, <code>&lt;option&gt;</code> elements can be grouped by wrapping them with in <br> an <code>&lt;optgroup&gt;</code> element: </p>
+                                </div>
+
+                                <select class="dropdown-groups" style="width:100%;">
+                                    <optgroup label="Group Name">
+                                        <option>Nested option 1</option>
+                                        <option>Nested option 2</option>
+                                        <option>Nested option 3</option>
+                                    </optgroup>
+                                    <optgroup label="Another Group Name">
+                                        <option>Nested option 1</option>
+                                        <option>Nested option 2</option>
+                                        <option>Nested option 3</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <h4 class="card-title">Disabling options</h4>
+                                    <p>Select2 will correctly handle disabled options when <code>disabled</code> attribute is set) and from remote srouces where the object has <code>disabled:
+                                            true</code> set.</p>
+                                </div>
+                                <select class="disabling-options" style="width:100%;">
+                                    <option value="one">First</option>
+                                    <option value="two" disabled="disabled">Second (disabled)</option>
+                                    <option value="three">Third</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <h4 class="card-title">Disabling a Select2 control</h4>
+                                    <p>Select2 will respond to the <code>disabled</code> attribute on
+                                        <code>&lt;select&gt;</code> elements. You can also initialize Select2 with
+                                        <code>disabled: true</code> to get the same effect.</p>
+                                </div>
+
+                                <div class="mb-3">
+                                    <select class="js-example-disabled" style="width:100%;">
+                                        <option value="AL">Alabama</option>
+                                        <option value="WY">Wyoming</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <select class="js-example-disabled-multi" style="width:100%;" name="states[]" multiple="multiple">
+                                        <option value="AL">Alabama</option>
+                                        <option value="WY">Wyoming</option>
+                                    </select>
+                                </div>
+
+                                <button class="btn btn-primary me-2" id="js-programmatic-enable">Enable</button>
+                                <button class="btn btn-danger light" id="js-programmatic-disable">Disable</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <h4 class="card-title">Select2 With Labels</h4>
+                                    <p>You can, and should, use a <code>&lt;label&gt;</code> with Select2, just like any other <code>&lt;select&gt;</code> element.</p>
+                                </div>
+
+                                <label class="mb-4 select2-label" for="id_label_single">
+                                    Click this to highlight the single select element <br>
+
+                                    <select class="select2-with-label-single js-states d-block" style="width:100%;" id="id_label_single">
+                                        <option value="AL">Alabama</option>
+                                        <option value="WY">Wyoming</option>
+                                    </select>
+                                </label>
+
+                                <label class="select2-label" for="id_label_multiple">
+                                    Click this to highlight the multiple select element <br>
+
+                                    <select class="select2-with-label-multiple js-states" style="width:100%;" id="id_label_multiple"
+                                        multiple="multiple">
+                                        <option value="AL">Alabama</option>
+                                        <option value="WY">Wyoming</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <h4 class="card-title">Container Width</h4>
+                                    <p>The two Select2 boxes below are styled to <code>50%</code> and <code>75%</code> width respectively to support responsive design:</p>
+                                </div>
+
+                                <div class="mb-3">
+                                    <select class="select2-width-50" style="width: 50%">
+                                        <option value="AL">Alabama</option>
+                                        <option value="WY">Wyoming</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <select class="select2-width-75" multiple="multiple" style="width: 75%">
+                                        <option value="AL">Alabama</option>
+                                        <option value="WY">Wyoming</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <h4 class="card-title">Themes</h4>
+                                    <p>Select2 supports custom themes using the <code>theme</code> option so you can style Select2 to match the rest of your application.</p>
+                                </div>
+
+                                <div class="mb-4">
+                                    <select class="js-example-theme-single" style="width:100%;">
+                                        <option value="AL">Alabama</option>
+                                        <option value="WY">Wyoming</option>
+                                    </select>
+                                </div>
+
+                                <div class="">
+                                    <select class="js-example-theme-multiple" style="width:100%;" name="states[]" multiple="multiple">
+                                        <option value="AL">Alabama</option>
+                                        <option value="WY">Wyoming</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <h4 class="card-title">Ajax (remote data)</h4>
+                                    <p>Select2 comes with AJAX support built in, using jQuery's AJAX methods. In this example, we can search for repositories using GitHub's API:</p>
+                                </div>
+
+                                <select class="js-data-example-ajax w-100">
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <h4 class="card-title">Loading array data</h4>
+                                    <p>You may use the <code>data</code> configuration option to load dropdown options from a local array.</p>
+                                </div>
+
+                                <select class="js-example-data-array" style="width:100%;">
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <h4 class="card-title">Automatic Selection</h4>
+                                    <p>Select2 can be configured to automatically select the currently highlighted result when the dropdown is closed by using the <code>selectOnClose</code> option:
+                                    </p>
+                                </div>
+
+                                <select id="automatic-selection" style="width:100%;">
+                                    <option value="AL">Alabama</option>
+                                    <option value="WY">Wyoming</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <h4 class="card-title">Remain open after selection</h4>
+                                    <p>Select2 will automatically close the dropdown when an element is selected, similar to what is done with a normal select box. You may use the
+                                        <code>closeOnSelect</code> option to prevent the dropdown from closing when a result is selected:</p>
+                                </div>
+
+                                <select id="remain-open" style="width:100%;">
+                                    <option value="AL">Alabama</option>
+                                    <option value="WY">Wyoming</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <h4 class="card-title">Dropdown placement</h4>
+                                    <p>The <code>dropdownParent</code> option allows you to pick an alternative element for the dropdown to be appended to:</p>
+                                </div>
+
+                                <select id="dropdown-placement" style="width:100%;">
+                                    <option value="AL">Alabama</option>
+                                    <option value="WY">Wyoming</option>
+                                </select>
+                                <div id="select2-modal">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <h4 class="card-title">Limiting the number of selections</h4>
+                                    <p>Select2 multi-value select boxes can set restrictions regarding the maximum number of options that can be selected. The select below is declared with the
+                                        <code>multiple</code> attribute with <code>maximumSelectionLength</code> in the select2 options.</p>
+                                </div>
+
+                                <select id="limit-selection" style="width:100%;" name="states[]" multiple="multiple">
+                                    <option value="AL">Alabama</option>
+                                    <option value="WY">Wyoming</option>
+                                    <option value="BY">Lorem</option>
+                                    <option value="DY">Ipsum</option>
+                                    <option value="MY">Dolor</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <h4 class="card-title">Dynamic option creation</h4>
+                                    <p>In addition to a prepopulated menu of options, Select2 can dynamically create new options from text input by the user in the search box. This feature is called "tagging". To enable tagging, set the <code>tags</code>                                        option to
+                                        <code>true</code>:</p>
+                                </div>
+                                <select id="dynamic-option-creation" style="width:100%;">
+                                    <option value="AL">Red</option>
+                                    <option value="WY">Green</option>
+                                    <option value="BY">Yellow</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <h4 class="card-title">Tagging with multi-value select boxes</h4>
+                                    <p>Tagging can also be used in multi-value select boxes. In the example below, we set the <code>multiple="multiple"</code> attribute on a Select2 control that also has <code>tags: true</code> enabled:</p>
+                                </div>
+
+                                <select id="multi-value-select" multiple="multiple" style="width:100%;">
+                                    <option selected="selected">orange</option>
+                                    <option>white</option>
+                                    <option selected="selected">purple</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <h4 class="card-title">Single select placeholders</h4>
+                                    <p>Select2 supports displaying a placeholder value using the
+                                        <code>placeholder</code> configuration option. The placeholder value will be displayed until a selection is made.</p>
+                                </div>
+
+                                <select class="single-select-placeholder js-states" style="width:100%;">
+
+                                    <option value="Alaska">Alaska</option>
+                                    <option value="Hawaii">Hawaii</option>
+                                    <option value="California">California</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <h4 class="card-title">Multi-select placeholders</h4>
+                                    <p>For multi-selects, you must <strong>not</strong> have an empty
+                                        <code>&lt;option&gt;</code>element:</p>
+                                </div>
+
+                                <select class="multi-select-placeholder js-states" style="width:100%;" multiple="multiple">
+                                    <option value="Alaska">Alaska</option>
+                                    <option value="Hawaii">Hawaii</option>
+                                    <option value="California">California</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <h4 class="card-title">Default selection placeholders</h4>
+                                    <p>Alternatively, the value of the <code>placeholder</code> option can be a data object representing a default selection (<code>&lt;option&gt;</code>). In this case the <code>id</code> of the data object should match the
+                                        <code>value</code> of the corresponding default selection.</p>
+                                </div>
+
+                                <select class="default-placeholder" style="width:100%;">
+
+                                    <option value="Alaska">Alaska</option>
+                                    <option value="Hawaii">Hawaii</option>
+                                    <option value="California">California</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <h4 class="card-title">Customizing how results are matched</h4>
+                                    <p>When users filter down the results by entering search terms into the search box, Select2 uses an internal "matcher" to match search terms to results. You may customize the way that Select2 matches search terms by specifying
+                                        a callback for the <code>matcher</code> configuration option.</p>
+                                </div>
+
+                                <select class="customize-result" style="width:100%;">
+                                    <option value="Alaska">Alaska</option>
+                                    <option value="Hawaii">Hawaii</option>
+                                    <option value="California">California</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <h4 class="card-title">Matching grouped options</h4>
+                                    <p>Only first-level objects will be passed in to the <code>matcher</code> callback. If you are working with nested data, you must iterate through the
+                                        <code>children</code> array and match them individually. This allows for more advanced matching when working with nested objects, allowing you to handle them however you want.</p>
+                                </div>
+
+                                <select class="match-grouped-options" style="width:100%;">
+                                    <optgroup label="Alaskan/Hawaiian Time Zone">
+                                        <option>Alaska</option>
+                                        <option>Hawaii</option>
+                                    </optgroup>
+                                    <optgroup label="Pacific Time Zone">
+                                        <option>California</option>
+                                        <option>Nevada</option>
+                                        <option>Oregon</option>
+                                        <option>Washington</option>
+                                    </optgroup>
+                                    <optgroup label="Mountain Time Zone">
+                                        <option>Arizona</option>
+                                        <option>Colorado</option>
+                                        <option>Idaho</option>
+                                        <option>Mountana</option>
+                                        <option>Nebraska</option>
+                                        <option>New Mexico</option>
+                                        <option>Utah</option>
+                                        <option>Wyoming</option>
+                                    </optgroup>
+                                    <optgroup label="Central Time Zone">
+                                        <option>Alabama</option>
+                                        <option>Arkansas</option>
+                                        <option>Illinois</option>
+                                        <option>Lowa</option>
+                                        <option>Kansas</option>
+                                    </optgroup>
+                                    <optgroup label="Eastern Time Zone">
+                                        <option>Connecticut</option>
+                                        <option>Delaware</option>
+                                        <option>Florida</option>
+                                        <option>Georgia</option>
+                                        <option>Indiana</option>
+                                        <option>Maine</option>
+                                        <option>Maryland</option>
+                                        <option>Massachusetts</option>
+                                        <option>Michigan</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <h4 class="card-title">Minumum search term length</h4>
+                                    <p>You may set a minimum search term length by using the
+                                        <code>minimumInputLength</code> option:</p>
+                                </div>
+
+                                <select class="minimum-search-length" style="width:100%;">
+                                    <option value="Alaska">Alaska</option>
+                                    <option value="Hawaii">Hawaii</option>
+                                    <option value="California">California</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <h4 class="card-title">Maximum search term length</h4>
+                                    <p>You may limit the maximum length of search terms by using the
+                                        <code>maximumInputLength</code> option:</p>
+                                </div>
+
+                                <select class="maximum-search-length" style="width:100%;">
+                                    <option value="Alaska">Alaska</option>
+                                    <option value="Hawaii">Hawaii</option>
+                                    <option value="California">California</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <h4 class="card-title">Programmatically add new options</h4>
+                                    <p>New options can be added to a Select2 control programmatically by creating a new Javascript <code>Option</code> object and appending it to the control:</p>
+                                </div>
+
+                                <select class="add-new-options" style="width:100%;">
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <h4 class="card-title">Create if not exists</h4>
+                                    <p>You can use <code>.find</code> to select the option if it already exists, and create it otherwise:</p>
+                                </div>
+
+                                <select class="create-if-not-exists" style="width:100%;">
+                                    <option value="Alaska">Alaska</option>
+                                    <option value="Hawaii">Hawaii</option>
+                                    <option value="California">California</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <h4 class="card-title">Using jQuery selector</h4>
+                                    <p>Selected items can also be accessed via the <code>:selected</code> jQuery selector:
+                                    </p>
+                                </div>
+
+                                <select class="jquery-selector" style="width:100%;">
+                                    <option value="Alaska">Alaska</option>
+                                    <option value="Hawaii">Hawaii</option>
+                                    <option value="California">California</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <h4 class="card-title">RTL support</h4>
+                                    <p>Select2 will work on RTL websites if the <code>dir</code> attribute is set on the
+                                        <code>&lt;select&gt;</code><span class="copy-to-clipboard" title="Copy to clipboard"></span> or any parents of it. You can also initialize Select2 with the <code>dir: "rtl"</code><span class="copy-to-clipboard"
+                                            title="Copy to clipboard"></span> configuration option.
+                                    </p>
+                                </div>
+
+                                <select class="rtl-select2" style="width:100%;">
+                                    <option value="Alaska">Alaska</option>
+                                    <option value="Hawaii">Hawaii</option>
+                                    <option value="California">California</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <h4 class="card-title">Destroying the Select2 control</h4>
+                                    <p>The <code>destroy</code> method will remove the Select2 widget from the target element. It will revert back to a standard <code>select</code> control:</p>
+                                </div>
+
+                                <div class="mb-4">
+                                    <select class="destroy-selector" style="width:100%;">
+                                        <option value="Alaska">Alaska</option>
+                                        <option value="Hawaii">Hawaii</option>
+                                        <option value="California">California</option>
+                                    </select>
+                                </div>
+                                <button id="destroy-selector-trigger" class="btn btn-primary">Destroy Select2</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <h4 class="card-title">Opening the dropdown</h4>
+                                    <p>Select2 will trigger a few different events when different actions are taken using the component, allowing you to add custom hooks and perform actions.</p>
+                                </div>
+
+                                <div class="mb-4">
+                                    <select class="opening-dropdown" style="width:100%;">
+                                        <option value="Alaska">Alaska</option>
+                                        <option value="Hawaii">Hawaii</option>
+                                        <option value="California">California</option>
+                                    </select>
+                                </div>
+                                <button id="dropdown-trigger-open" class="btn btn-primary">Open Dropdown</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <h4 class="card-title">Opening/Closing the dropdown</h4>
+                                    <p>Select2 will trigger a few different events when different actions are taken using the component, allowing you to add custom hooks and perform actions.</p>
+                                </div>
+                                <button id="opening-dropdown-trigger" class="btn btn-primary mb-2">Open
+                                    Dropdown</button>
+                                <button id="closing-dropdown-trigger" class="btn btn-primary mb-2">Close
+                                    Dropdown</button>
+                                <div class="mt-4">
+                                    <select class="open-close-dropdown" style="width:100%;">
+                                        <option value="Alaska">Alaska</option>
+                                        <option value="Hawaii">Hawaii</option>
+                                        <option value="California">California</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <h4 class="card-title">Select2 methods</h4>
+                                    <p>Select2 has several built-in methods that allow programmatic control of the component. </p>
+                                </div>
+
+                                <label class="select2-label">Single select</label> <br>
+                                <button class="js-programmatic-set-val btn btn-primary mb-2" aria-label="Set Select2 option">
+                                    Set "California"
+                                </button>
+
+                                <button class="js-programmatic-open btn btn-primary mb-2">
+                                    Open
+                                </button>
+
+                                <button class="js-programmatic-close btn btn-primary mb-2">
+                                    Close
+                                </button>
+
+                                <button class="js-programmatic-destroy btn btn-primary mb-2">
+                                    Destroy
+                                </button>
+
+                                <button class="js-programmatic-init btn btn-primary mb-2">
+                                    Re-initialize
+                                </button>
+
+                                <div class="mt-4">
+                                    <select class="single-event-unbind" style="width:100%;">
+                                        <option value="AL">Alaska</option>
+                                        <option value="HA">Hawaii</option>
+                                        <option value="CA">California</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <h4 class="card-title">Select2 methods</h4>
+                                    <p>Select2 has several built-in methods that allow programmatic control of the component. </p>
+                                </div>
+
+                                <label class="select2-label">Multiple select</label> <br>
+                                <button class="js-programmatic-multi-set-val btn btn-primary mb-2" aria-label="Set Select2 option">
+                                    Set to Hawaii and California
+                                </button>
+
+                                <button class="js-programmatic-multi-clear btn btn-primary mb-2">
+                                    Clear
+                                </button>
+
+                                <div class="mt-4">
+                                    <select class="js-example-programmatic-multi" style="width:100%;" multiple="multiple">
+                                        <option value="AL">Alaska</option>
+                                        <option value="HA">Hawaii</option>
+                                        <option value="CA">California</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <!--**********************************
             Content body end
         ***********************************-->
+
 
         <!--**********************************
             Footer start
@@ -1439,7 +1697,7 @@
             Footer end
         ***********************************-->
 
-		<!--**********************************
+        <!--**********************************
            Support ticket button start
         ***********************************-->
 
@@ -1447,8 +1705,8 @@
            Support ticket button end
         ***********************************-->
 
-
-	</div>
+        
+    </div>
     <!--**********************************
         Main wrapper end
     ***********************************-->
@@ -1459,33 +1717,19 @@
     <!-- Required vendors -->
     <script src="vendor/global/global.min.js"></script>
 	<script src="vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
-	<script src="vendor/chart.js/Chart.bundle.min.js"></script>
-	
-	<!-- Chart piety plugin files -->
-    <script src="vendor/peity/jquery.peity.min.js"></script>
-	
-	<!-- Apex Chart -->
-	<script src="vendor/apexchart/apexchart.js"></script>
-	
-	<!-- Dashboard 1 -->
-	<script src="js/dashboard/dashboard-2.js"></script>
-
     <script src="js/custom.min.js"></script>
+
+
+    <script src="vendor/select2/js/select2.full.min.js"></script>
+    <script src="js/plugins-init/select2-init.js"></script>
+
+
+
+	<script src="js/deznav-init.js"></script>
+	<script src="js/demo.js"></script>
+	<script src="js/styleSwitcher.js"></script>
 	
     
-	<script>
-		jQuery(document).ready(function(){
-			setTimeout(function(){
-				dezSettingsOptions.version = 'dark';
-				new dezSettings(dezSettingsOptions);
-			},1000)
-			jQuery(window).on('resize',function(){
-				dezSettingsOptions.version = 'dark';
-				new dezSettings(dezSettingsOptions);
-				jQuery('.dz-theme-mode').addClass('active');
-			});
-		});
-	</script>
 </body>
 
 </html>
