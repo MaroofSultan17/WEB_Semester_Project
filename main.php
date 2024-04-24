@@ -1,26 +1,31 @@
 <?php
-include ("./libraries/variables.php");
+include ("./helper/session.php");
 include ("./helper/db-config.php");
+include ("./libraries/variables.php");
+$PageIndex = "home";
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Login | Signup |
+    <title>Main |
         <?php echo (constant('siteTitle')); ?>
     </title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Links  -->
     <?php
     echo require ("./components/links.php");
     ?>
+    <!-- Links -->
 </head>
 
 <body>
+
     <!-- HEADER-SECTION START  -->
+
     <header class="header-section">
         <div class="top-bar">
             <div class="container d-flex align-items-center justify-content-between">
@@ -31,6 +36,7 @@ include ("./helper/db-config.php");
                             </a></li>
                         <li><a href="#"><i class="fa-regular fa-envelope"></i>
                                 <?php echo constant('siteEmail'); ?>
+                                
                             </a></li>
                         <li><a href="#"><i class="fa-sharp fa-solid fa-location-dot"></i>
                                 <?php echo constant('address'); ?>
@@ -38,24 +44,6 @@ include ("./helper/db-config.php");
                     </ul>
                 </div>
                 <div class="top-bar-social d-flex align-items-center">
-                    <ul class="view-switcher d-flex align-items-center">
-                        <li>
-                            <span>usd<i class="fa-solid fa-angle-down"></i></span>
-                            <ul class="evani-curency">
-                                <li><a href="#">euro</a></li>
-                                <li><a href="#">tk</a></li>
-                                <li><a href="#">usd</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <span>en<i class="fa-solid fa-angle-down"></i></span>
-                            <ul class="evani-curency">
-                                <li><a href="#">english</a></li>
-                                <li><a href="#">bangla</a></li>
-                                <li><a href="#">jerman</a></li>
-                            </ul>
-                        </li>
-                    </ul>
                     <ul class="social-icon d-flex align-items-center">
                         <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a></li>
                         <li><a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a></li>
@@ -75,7 +63,7 @@ include ("./helper/db-config.php");
                     </div>
                     <div class="evani-search-form">
                         <form class="search-product d-flex align-items-center justify-content-between"
-                            id="search-product" action="https://ethemestudio.com/search" method="GET">
+                            id="search-product" action="#" method="GET">
                             <input type="text" name="query" placeholder="Type to search i.e “sunglass”...">
                             <button type="submit">
                                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -92,7 +80,7 @@ include ("./helper/db-config.php");
                                         <label class="close-btn fas fa-times popup-label"></label>
                                         <label class="la-search-pr">Search Product</label>
                                         <form class="search-product d-flex align-items-center justify-content-between"
-                                            action="https://ethemestudio.com/search" method="GET">
+                                            action="#" method="GET">
                                             <input type="text" name="query"
                                                 placeholder="Type to search i.e “sunglass”...">
                                             <button type="submit">
@@ -102,98 +90,13 @@ include ("./helper/db-config.php");
                                     </div>
                                 </div>
                             </li>
-
                             <!-- Login Section Start -->
-
-                            <li>
-                                <a class="log-in header-popup log-in-btn d-flex align-items-center" id="header-popup1"
-                                    href="#"><span class="log-in-text">log in</span><i class="fa-solid fa-user"></i></a>
-                                <div class="popup-wraper1">
-                                    <div class="view-popup" style="transform: translateY(15%);">
-                                        <label class="close-btn fas fa-times popup-label"></label>
-                                        <h6>Login</h6>
-                                        <form action="./helper/loginValidation.php" method="POST">
-                                            <div class="mb-3">
-                                                <label for="fullname" class="form-label">Full Name*</label>
-                                                <input type="text" class="form-control form-control-lg" id="fullname"
-                                                    name="fullname" required>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="password" class="form-label">Password*</label>
-                                                <input type="password" class="form-control form-control-lg"
-                                                    id="password" name="password">
-                                            </div>
-                                            <div class="d-flex align-items-center justify-content-between">
-                                                <div class="check-box d-flex align-items-center">
-                                                    <input type="checkbox" name="remember">
-                                                    <label>Remember me</label>
-                                                </div>
-                                                <a href="#">Forgot Password?</a>
-                                            </div>
-                                            <div class="popup-btn">
-                                                <button class="popup-link" type="submit" name="submit">Login</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </li>
-
+                            <?php require ('login.php'); ?>
                             <!-- Login Section End -->
 
-
                             <!-- Signup Section Start -->
-
-                            <li>
-
-                                <a class="sign-up header-popup d-flex align-items-center" id="header-popup2"
-                                    href="#"><span class="log-in-text">sign
-                                        up</span></a>
-                                <div class="popup-wraper2">
-                                    <div class="view-popup" style="transform: translateY(8%);">
-                                        <label class="close-btn fas fa-times popup-label"></label>
-                                        <h6>Sign Up</h6>
-
-                                        <form action="./helper/signupValidation.php" method="POST">
-                                            <div class="mb-3">
-                                                <label for="fullname" class="form-label">Full Name*</label>
-                                                <input type="text" class="form-control form-control-lg" id="fullname"
-                                                    name="fullname" required>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="email" class="form-label">Email address*</label>
-                                                <input type="email" class="form-control form-control-lg" id="email"
-                                                    aria-describedby="email" name="email">
-                                                <div id="email" class="form-text">We'll never share your email with
-                                                    anyone else.</div>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="contact" class="form-label">Contact Number*</label>
-                                                <input type="contact" class="form-control form-control-lg" id="contact"
-                                                    name="contact">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="password" class="form-label">Password*</label>
-                                                <input type="password" class="form-control form-control-lg"
-                                                    id="password" name="password">
-                                            </div>
-                                            <div class="d-flex align-items-center justify-content-between">
-                                                <div class="check-box d-flex align-items-center">
-                                                    <input type="checkbox" name="remember">
-                                                    <label>Remember me</label>
-                                                </div>
-                                                <a href="#">Forgot Password?</a>
-                                            </div>
-                                            <div class="popup-btn">
-                                                <button class="popup-link" type="submit" name="submit">Register</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </li>
-
-
+                            <?php require ('signup.php'); ?>
                             <!-- Signup Section End -->
-
                             <li><a href="#"><i class="fa-solid fa-heart"></i></a></li>
                             <li class="product-cart">
                                 <a href="#" class="cart-icon" id="toggleButton"><i
@@ -353,30 +256,11 @@ include ("./helper/db-config.php");
                                         <a href="#" class="nav-link">Pages <i class="fas fa-angle-down"></i></a>
                                         <div class="sub-menu mega-menu mega-menu-column-4">
                                             <div class="list-item">
-                                                <h4 class="title">Home Page</h4>
-                                                <ul>
-                                                    <li><a href="index-2.php">Home One</a></li>
-                                                    <li><a href="index_2.php">Home Two</a></li>
-                                                    <li><a href="index_3.php">Home Three</a></li>
-                                                </ul>
                                                 <h4 class="title">Shop Page</h4>
                                                 <ul>
                                                     <li><a href="shop.php">Shop</a></li>
                                                     <li><a href="shop-with-sidebar.php">Shop With Sidebar</a></li>
                                                     <li><a href="shopping-cart.php">Shopping Cart</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="list-item">
-                                                <h4 class="title">Collection Page</h4>
-                                                <ul>
-                                                    <li><a href="collections.php">Collections</a></li>
-                                                    <li><a href="all-collections.php">All Collections</a></li>
-                                                </ul>
-                                                <h4 class="title">Product Page</h4>
-                                                <ul>
-                                                    <li><a href="single-product.php">Single Product</a></li>
-                                                    <li><a href="checkout.php">Checkout</a></li>
-                                                    <li><a href="wishlist.php">Wishlist</a></li>
                                                 </ul>
                                             </div>
                                             <div class="list-item">
@@ -388,8 +272,23 @@ include ("./helper/db-config.php");
                                                 </ul>
                                             </div>
                                             <div class="list-item">
-                                                <img src="images/header/product/shape-1.png" alt="header">
+                                                <h4 class="title">Blog Page</h4>
+                                                <ul>
+                                                    <li><a href="recent-blog.php">Recent Blog</a></li>
+                                                    <li><a href="recent-blog-two.php">Recent Blog Two</a></li>
+                                                    <li><a href="single-blog.php">Single Blog</a></li>
+                                                </ul>
                                             </div>
+                                            <div class="list-item">
+                                                <h4 class="title">Collection Page</h4>
+                                                <ul>
+                                                    <li><a href="collections.php">Collections</a></li>
+                                                    <li><a href="all-collections.php">All Collections</a></li>
+                                                </ul>
+                                            </div>
+                                            <!-- <div class="list-item">
+                                                <img src="images/header/product/shape-1.png" alt="header">
+                                            </div> -->
                                         </div>
                                     </li>
                                     <li>
@@ -410,15 +309,19 @@ include ("./helper/db-config.php");
             </div>
         </div>
     </header>
+
     <!-- HEADER-SECTION END  -->
 
     <!-- BANNER-SECTION START  -->
+
     <?php
     require ("./components/banner.php");
     ?>
+
     <!-- BANNER-SECTION END  -->
 
     <!-- INTR0-SECTION START  -->
+
     <section class="intro-section">
         <div class="container">
             <div class="intro-items">
@@ -461,9 +364,11 @@ include ("./helper/db-config.php");
             </div>
         </div>
     </section>
+
     <!-- INTR0-SECTION END  -->
 
     <!-- CATAGORIES-SECTION START  -->
+
     <section class="categories-section">
         <div class="container">
             <div class="ev-top-content">
@@ -507,9 +412,11 @@ include ("./helper/db-config.php");
             <a href="shop-with-sidebar.php" class="view-all">View All</a>
         </div>
     </section>
+
     <!-- CATAGORIES-SECTION END  -->
 
     <!-- COLLECTION-SECTION START  -->
+
     <section class="collection-section">
         <div class="container">
             <div class="ev-top-content">
@@ -613,14 +520,16 @@ include ("./helper/db-config.php");
             </div>
         </div>
     </section>
+
     <!-- COLLECTION-SECTION END  -->
 
     <!-- `PRODUCT-SECTION START  -->
+
     <section class="product-section">
         <div class="container">
             <div class="ev-top-content">
                 <span>Grab Yours Now</span>
-                <h2 style="text-align: center;">Don't Miss Out on Our Sale</h2>
+                <h2 style="text-align: center;">Don't Miss Out <br> on Our Sale</h2>
                 <p>Turn up the savings! Shop now for irresistible deals.</p>
             </div>
             <div class="menu-fulter">
@@ -838,9 +747,11 @@ include ("./helper/db-config.php");
         <a href="shop-with-sidebar.php" class="view-all">View All</a>
         </div>
     </section>
+
     <!-- PRODUCT-SECTION END  -->
 
     <!--    FEATURED-PRODUCT-SECTION START  -->
+
     <section class="featured-product-section">
         <div class="container">
             <div class="row">
@@ -872,9 +783,11 @@ include ("./helper/db-config.php");
             </div>
         </div>
     </section>
+
     <!--    FEATURED-PRODUCT-SECTION END  -->
 
     <!--    FEATURED-COLLECTION-SECTION START  -->
+
     <section class="featured-collection-section">
         <div class="container-fluid">
             <div class="collection-grid">
@@ -904,9 +817,11 @@ include ("./helper/db-config.php");
             </div>
         </div>
     </section>
+
     <!--    FEATURED-COLLECTION-SECTION END  -->
 
     <!--    POPULAR-PRODUCT-SECTION START  -->
+
     <section class="popular-product-section">
         <div class="container">
             <div class="ev-top-content">
@@ -1111,9 +1026,11 @@ include ("./helper/db-config.php");
             </div>
         </div>
     </section>
+
     <!--    POPULAR-PRODUCT-SECTION END  -->
 
     <!--    BRAND-SECTION START  -->
+
     <section class="brand-section">
         <div class="container">
             <div class="brand-heading">
@@ -1170,9 +1087,11 @@ include ("./helper/db-config.php");
             </div>
         </div>
     </section>
+
     <!--    BRAND-SECTION END  -->
 
     <!--    TESTIMONIAL-SECTION START  -->
+
     <section class="testimonial-section">
         <div class="container">
             <div class="ev-top-content">
@@ -1182,70 +1101,44 @@ include ("./helper/db-config.php");
             </div>
             <div class="swiper testimonial-slider testimonial-items">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide single-testimonial">
-                        <div class="testimonial-author d-flex align-items-center justify-content-between">
-                            <div class="author-bio d-flex align-items-center">
-                                <div class="author-img">
-                                    <img src="images/index-1/testimonial/author-1.png" alt="testimonial">
+                    <?php
+                    $Query = "SELECT * FROM review LEFT JOIN customer ON review.cid = customer.cid";
+                    $result = mysqli_query($conn, $Query);
+                    if ($result->num_rows > 0) {
+                        while ($row = mysqli_fetch_array($result)) {
+                            ?>
+                            <div class="swiper-slide single-testimonial">
+                                <div class="testimonial-author d-flex align-items-center justify-content-between">
+                                    <div class="author-bio d-flex align-items-center">
+                                        <div class="author-img">
+                                            <img src="<?php echo $row['authorimage']; ?>" alt="testimonial">
+                                        </div>
+                                        <div class="author-text">
+                                            <h6>
+                                                <?php echo strtoupper($row['fullname']); ?>
+                                            </h6>
+                                            <span>
+                                                <?php echo $row['subject']; ?>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="quote-icon">
+                                        <img src="<?php echo $row['quoteimage']; ?>" alt="testimonial">
+                                    </div>
                                 </div>
-                                <div class="author-text">
-                                    <h6>Sharmin Eity</h6>
-                                    <span>Journalist</span>
-                                </div>
-                            </div>
-                            <div class="quote-icon">
-                                <img src="images/index-1/testimonial/quot/shape-1.png" alt="testimonial">
-                            </div>
-                        </div>
-                        <div class="testimonial-text">
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt ming
-                                elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide single-testimonial">
-                        <div class="testimonial-author d-flex align-items-center justify-content-between">
-                            <div class="author-bio d-flex align-items-center">
-                                <div class="author-img">
-                                    <img src="images/index-1/testimonial/author-2.png" alt="testimonial">
-                                </div>
-                                <div class="author-text">
-                                    <h6>Tom Anderson</h6>
-                                    <span>Web Developer</span>
-                                </div>
-                            </div>
-                            <div class="quote-icon">
-                                <img src="images/index-1/testimonial/quot/shape-2.png" alt="testimonial">
-                            </div>
-                        </div>
-                        <div class="testimonial-text">
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt ming
-                                elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide single-testimonial">
-                        <div class="testimonial-author d-flex align-items-center justify-content-between">
-                            <div class="author-bio d-flex align-items-center">
-                                <div class="author-img">
-                                    <img src="images/index-1/testimonial/author-3.png" alt="testimonial">
-                                </div>
-                                <div class="author-text">
-                                    <h6>Nayna Eva</h6>
-                                    <span>Photographer</span>
+                                <div class="testimonial-text">
+                                    <p>
+                                        <?php echo $row['description']; ?>
+                                    </p>
                                 </div>
                             </div>
-                            <div class="quote-icon">
-                                <img src="images/index-1/testimonial/quot/shape-3.png" alt="testimonial">
-                            </div>
-                        </div>
-                        <div class="testimonial-text">
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt ming
-                                elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide single-testimonial">
+
+                        <?php }
+                    } else {
+                        echo "Data Not FOund";
+                    }
+                    ?>
+                    <!-- <div class="swiper-slide single-testimonial">
                         <div class="testimonial-author d-flex align-items-center justify-content-between">
                             <div class="author-bio d-flex align-items-center">
                                 <div class="author-img">
@@ -1349,7 +1242,7 @@ include ("./helper/db-config.php");
                                 elit, sed do eiusmod tempor incididunt
                                 ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
                         </div>
-                    </div>
+                    </div>  -->
                 </div>
                 <div class="swiper-button-next hero-slide-btn testimonial-slide-btn">
                     <i class="fa-solid fa-arrow-right"></i>
@@ -1360,9 +1253,11 @@ include ("./helper/db-config.php");
             </div>
         </div>
     </section>
+
     <!--    TESTIMONIAL-SECTION END  -->
 
     <!--    NEWS-SECTION START  -->
+
     <section class="news-section">
         <div class="container">
             <div class="ev-top-content">
@@ -1443,17 +1338,27 @@ include ("./helper/db-config.php");
             </div>
         </div>
     </section>
+
     <!--    NEWS-SECTION END  -->
 
 
     <!--    FOOTER-SECTION START -->
+
+
     <?php require ("./components/footer.php"); ?>
+
+
+
     <!-- FOOTER-SECTION END  -->
 
+
     <!--    FOOTER-ICONTOP START  -->
+
     <div class="footer_iconTop">
         <a href="#" id="button"><i class="fa-solid fa-arrow-up"></i></a>
     </div>
+
+
     <!--    FOOTER-ICONTOP END  -->
 
 

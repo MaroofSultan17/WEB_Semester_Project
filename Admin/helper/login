@@ -1,0 +1,57 @@
+<h1>Welcome in Login loginValidation</h1>
+
+<?php
+include ("db-config.php");
+if (isset($_REQUEST["submit"])) {
+    $FullName = mysqli_real_escape_string($conn, $_POST['fullname']);
+    $Password = mysqli_real_escape_string($conn, $_POST['password']);
+
+    // echo $FullName;
+    // die;
+
+    $Query = "SELECT fullname, password FROM signup";
+
+    // echo $Query;
+    // die;z
+    $result = mysqli_query($conn, $Query);
+
+    $Data = mysqli_fetch_array($result);
+
+    if (mysqli_num_rows($result) > 0) {
+        if ($FullName = $Data['fullname'] && $Password = $Data['password']) {
+            // if ($Password = $Data['password']) {
+            ?>
+            <script>
+                alert("Login Successfully.");
+                window.location.href = '../index.php?success';
+            </script>
+            <?php
+        } else {
+            ?>
+            <script>
+                alert("Incorrect Password.");
+                window.location.href = '../login.php?error';
+            </script>
+            <?php
+        }
+
+        // } else {
+        //      ?>
+        //
+        <script>
+            //         alert("User Not Exsist. Please Signup First.");
+            //         window.location.href = '../signup.php?error';
+            //     </script>
+        //
+        <?php
+        // }
+
+    }
+    // if($FullName == $Data['fullname'] && $Password == $Data['password']){
+    //     echo'Welcome';
+    // }else{
+    //     echo 'Incorrect';
+    // }
+}
+
+?>
