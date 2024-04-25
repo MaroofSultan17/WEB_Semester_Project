@@ -1,18 +1,17 @@
 <?php
-include ("db-config.php");
-if (isset($_REQUEST["submit"])) {
-    $fullName = mysqli_real_escape_string($conn, $_POST['fullname']);
+include ("config.php");
+if (isset($_REQUEST["signin"])) {
+    $Email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
     $SecurePassword = md5($password);
-    $Query = "SELECT cid, fullname, securepassword FROM customer WHERE fullname='$fullName' AND securepassword='$SecurePassword'";
-    // echo $Query;
-    // die;
+    $Query = "SELECT token, securepassword FROM admin WHERE email='$Email' AND securepassword='$SecurePassword'";
+    // echo $Query;  die;
     $Result = mysqli_query($conn, $Query);
     if ($Result->num_rows > 0) {
         $row = mysqli_fetch_object($Result);
-        $_SESSION['SESSION_ID'] = $row->cid;
+        $_SESSION['SESSION_ID'] = $row->token;
         $_SESSION['password'] = $row->securepassword;
-        header('Location:../main.php');
+        header('Location:../index.php');
         exit();
         // echo "<script>window.location.href='index.php';</script>";
         // exit();
@@ -20,7 +19,7 @@ if (isset($_REQUEST["submit"])) {
         ?>
         <script>
             alert("Invalid Credentials")
-            window.location.href = "../index.php";
+            window.location.href = "../login.php";
         </script>
         <?php
     }

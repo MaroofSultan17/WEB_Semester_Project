@@ -94,7 +94,10 @@
                 <div class="widgets-item widgets-p-top">
                     <div class="news-letter">
                         <h6>Newsletter</h6>
-                        <p>Ut enim ad minim veniam, quis nos trud exercitation ullamco laboris nisi ut aliquip modo
+                        <p style="text-align: justify;">Subscribe to our newsletter for exclusive offers, product
+                            updates, and
+                            insider news delivered
+                            straight to your inbox. Join our community and stay informed!
                         </p>
                         <form class="widgets-form d-flex align-items-center justify-content-between"
                             action="https://ethemestudio.com/submit" method="POST">

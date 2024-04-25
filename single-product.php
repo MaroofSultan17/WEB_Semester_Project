@@ -1,3 +1,8 @@
+<?php
+
+// include ("./helper/session.php");
+// include ("./helper/db-config.php");
+include ("./libraries/variables.php"); ?>
 <!DOCTYPE html>
 <html lang="zxx">
 

@@ -18,7 +18,6 @@ include ("./helper/db-config.php");
 </head>
 
 <body>
-    <!-- HEADER-SECTION START  -->
     <header class="header-section">
         <div class="top-bar">
             <div class="container d-flex align-items-center justify-content-between">
@@ -252,16 +251,7 @@ include ("./helper/db-config.php");
                                     <div class="mobile-menu-close"><i class="fa-solid fa-x"></i></div>
                                 </div>
                                 <ul class="menu-items">
-                                    <!-- <li class="menu-item-has-children">
-                                        <a href="#" class="nav-link  active ">Home <i class="fa fa-angle-down"></i></a>
-                                        <div class="sub-menu single-column-menu">
-                                            <ul>
-                                                <li><a href="index-2.php">Home One</a></li>
-                                                <li><a href="index_2.php">Home two</a></li>
-                                                <li><a href="index_3.php">Home three</a></li>
-                                            </ul>
-                                        </div>
-                                    </li> -->
+
                                     <li>
                                         <a href="#">Home</a>
                                     </li>
@@ -352,11 +342,7 @@ include ("./helper/db-config.php");
                                         <div class="sub-menu mega-menu mega-menu-column-4">
                                             <div class="list-item">
                                                 <h4 class="title">Home Page</h4>
-                                                <!-- <ul>
-                                                    <li><a href="index-2.php">Home One</a></li>
-                                                    <li><a href="index_2.php">Home Two</a></li>
-                                                    <li><a href="index_3.php">Home Three</a></li>
-                                                </ul> -->
+
                                                 <h4 class="title">Shop Page</h4>
                                                 <ul>
                                                     <li><a href="shop.php">Shop</a></li>
@@ -396,7 +382,6 @@ include ("./helper/db-config.php");
                                 </ul>
                             </nav>
                         </div>
-                        <!-- menu end here -->
                         <div class="header-item item-right">
                             <a href="#"><i class="fa-solid fa-headset"></i>Help & Support</a>
                             <div class="mobile-menu-trigger">
@@ -408,15 +393,9 @@ include ("./helper/db-config.php");
             </div>
         </div>
     </header>
-    <!-- HEADER-SECTION END  -->
-
-    <!-- BANNER-SECTION START  -->
     <?php
     require ("./components/banner.php");
     ?>
-    <!-- BANNER-SECTION END  -->
-
-    <!-- INTR0-SECTION START  -->
     <section class="intro-section">
         <div class="container">
             <div class="intro-items">
@@ -459,9 +438,6 @@ include ("./helper/db-config.php");
             </div>
         </div>
     </section>
-    <!-- INTR0-SECTION END  -->
-
-    <!-- CATAGORIES-SECTION START  -->
     <section class="categories-section">
         <div class="container">
             <div class="ev-top-content">
@@ -474,11 +450,8 @@ include ("./helper/db-config.php");
                 <?php
                 $Query = "SELECT categories, items, image FROM topcategories1 WHERE status = 1 ";
                 $result = mysqli_query($conn, $Query);
-
                 if ($result->num_rows > 0) {
-
                     while ($row = mysqli_fetch_array($result)) {
-
                         ?>
                         <div class="single-categorie">
                             <a href="shop-with-sidebar.php" class="categorie-link">
@@ -505,9 +478,6 @@ include ("./helper/db-config.php");
             <a href="shop-with-sidebar.php" class="view-all">View All</a>
         </div>
     </section>
-    <!-- CATAGORIES-SECTION END  -->
-
-    <!-- COLLECTION-SECTION START  -->
     <section class="collection-section">
         <div class="container">
             <div class="ev-top-content">
@@ -515,7 +485,6 @@ include ("./helper/db-config.php");
                 <h2>Products Are on Sale</h2>
                 <p>Explore unbeatable deals on top-quality products! Shop now and elevate
                     your experience!</p>
-
             </div>
             <div class="collection-items">
                 <div class="collection-column">
@@ -611,9 +580,6 @@ include ("./helper/db-config.php");
             </div>
         </div>
     </section>
-    <!-- COLLECTION-SECTION END  -->
-
-    <!-- `PRODUCT-SECTION START  -->
     <section class="product-section">
         <div class="container">
             <div class="ev-top-content">
@@ -638,8 +604,6 @@ include ("./helper/db-config.php");
 
             <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-
-                    <!-- Sale Recent Product Section Start -->
                     <div class="products ev-products">
                         <?php
                         $Query = "SELECT * FROM sale WHERE catageory = 'recent'";
@@ -647,7 +611,6 @@ include ("./helper/db-config.php");
                         if ($result->num_rows > 0) {
                             while ($row = mysqli_fetch_array($result)) {
                                 ?>
-                                <!-- Single Product -->
                                 <div class="product">
                                     <div class="product-img">
                                         <a href="single-product.php">
@@ -695,14 +658,8 @@ include ("./helper/db-config.php");
                             echo 'Data Not Found';
                         }
                         ?>
-                        <!-- Single Product End -->
-
                     </div>
-
-                    <!-- Sale Recent Product Section End -->
                 </div>
-
-                <!-- Sale Popular Product Start -->
                 <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                     <div class="products ev-products">
                         <?php
@@ -711,7 +668,6 @@ include ("./helper/db-config.php");
                         if ($result->num_rows > 0) {
                             while ($row = mysqli_fetch_array($result)) {
                                 ?>
-                                <!-- Single Product -->
                                 <div class="product">
                                     <div class="product-img">
                                         <a href="single-product.php">
@@ -761,15 +717,7 @@ include ("./helper/db-config.php");
                         }
                         ?>
                     </div>
-                    <!-- Single Product End -->
-
                 </div>
-
-                <!-- Sale Popular Product End -->
-
-
-                <!-- Sale Top Product Start -->
-
                 <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
                     <div class="products ev-products">
                         <?php
@@ -778,7 +726,6 @@ include ("./helper/db-config.php");
                         if ($result->num_rows > 0) {
                             while ($row = mysqli_fetch_array($result)) {
                                 ?>
-                                <!-- Single Product -->
                                 <div class="product">
                                     <div class="product-img">
                                         <a href="single-product.php">
@@ -829,16 +776,11 @@ include ("./helper/db-config.php");
                         ?>
                     </div>
                 </div>
-                <!-- Sale Top Product End -->
-
             </div>
         </div>
         <a href="shop-with-sidebar.php" class="view-all">View All</a>
         </div>
     </section>
-    <!-- PRODUCT-SECTION END  -->
-
-    <!--    FEATURED-PRODUCT-SECTION START  -->
     <section class="featured-product-section">
         <div class="container">
             <div class="row">
@@ -870,9 +812,6 @@ include ("./helper/db-config.php");
             </div>
         </div>
     </section>
-    <!--    FEATURED-PRODUCT-SECTION END  -->
-
-    <!--    FEATURED-COLLECTION-SECTION START  -->
     <section class="featured-collection-section">
         <div class="container-fluid">
             <div class="collection-grid">
@@ -902,9 +841,6 @@ include ("./helper/db-config.php");
             </div>
         </div>
     </section>
-    <!--    FEATURED-COLLECTION-SECTION END  -->
-
-    <!--    POPULAR-PRODUCT-SECTION START  -->
     <section class="popular-product-section">
         <div class="container">
             <div class="ev-top-content">
@@ -1109,9 +1045,6 @@ include ("./helper/db-config.php");
             </div>
         </div>
     </section>
-    <!--    POPULAR-PRODUCT-SECTION END  -->
-
-    <!--    BRAND-SECTION START  -->
     <section class="brand-section">
         <div class="container">
             <div class="brand-heading">
@@ -1168,9 +1101,6 @@ include ("./helper/db-config.php");
             </div>
         </div>
     </section>
-    <!--    BRAND-SECTION END  -->
-
-    <!--    TESTIMONIAL-SECTION START  -->
     <section class="testimonial-section">
         <div class="container">
             <div class="ev-top-content">
@@ -1358,9 +1288,6 @@ include ("./helper/db-config.php");
             </div>
         </div>
     </section>
-    <!--    TESTIMONIAL-SECTION END  -->
-
-    <!--    NEWS-SECTION START  -->
     <section class="news-section">
         <div class="container">
             <div class="ev-top-content">
@@ -1441,20 +1368,10 @@ include ("./helper/db-config.php");
             </div>
         </div>
     </section>
-    <!--    NEWS-SECTION END  -->
-
-
-    <!--    FOOTER-SECTION START -->
     <?php require ("./components/footer.php"); ?>
-    <!-- FOOTER-SECTION END  -->
-
-    <!--    FOOTER-ICONTOP START  -->
     <div class="footer_iconTop">
         <a href="#" id="button"><i class="fa-solid fa-arrow-up"></i></a>
     </div>
-    <!--    FOOTER-ICONTOP END  -->
-
-
     <script src="js/jquery-min.js"></script>
     <script src="js/jquery-ui.js"></script>
     <script src="js/popper.js"></script>
@@ -1463,9 +1380,6 @@ include ("./helper/db-config.php");
     <script src="js/mmenu.js"></script>
     <script src="js/leaflet.js"></script>
     <script src="js/script.js"></script>
-
 </body>
-
-
 
 </html>

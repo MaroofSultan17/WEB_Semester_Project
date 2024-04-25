@@ -14,18 +14,12 @@ $PageIndex = "home";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Links  -->
     <?php
     echo require ("./components/links.php");
     ?>
-    <!-- Links -->
 </head>
 
 <body>
-
-    <!-- HEADER-SECTION START  -->
-
     <header class="header-section">
         <div class="top-bar">
             <div class="container d-flex align-items-center justify-content-between">
@@ -36,7 +30,7 @@ $PageIndex = "home";
                             </a></li>
                         <li><a href="#"><i class="fa-regular fa-envelope"></i>
                                 <?php echo constant('siteEmail'); ?>
-                                
+
                             </a></li>
                         <li><a href="#"><i class="fa-sharp fa-solid fa-location-dot"></i>
                                 <?php echo constant('address'); ?>
@@ -45,10 +39,12 @@ $PageIndex = "home";
                 </div>
                 <div class="top-bar-social d-flex align-items-center">
                     <ul class="social-icon d-flex align-items-center">
-                        <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a></li>
-                        <li><a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a></li>
-                        <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                        <li><a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a></li>
+                        <li><a href="<?php echo constant('facebook'); ?>"><i class="fa-brands fa-facebook-f"></i></a>
+                        </li>
+                        <li><a href="<?php echo constant('twitter'); ?>"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="<?php echo constant('linkedin'); ?>"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </li>
+                        <li><a href="<?php echo constant('youtube'); ?>"><i class="fa-brands fa-youtube"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -90,13 +86,8 @@ $PageIndex = "home";
                                     </div>
                                 </div>
                             </li>
-                            <!-- Login Section Start -->
                             <?php require ('login.php'); ?>
-                            <!-- Login Section End -->
-
-                            <!-- Signup Section Start -->
                             <?php require ('signup.php'); ?>
-                            <!-- Signup Section End -->
                             <li><a href="#"><i class="fa-solid fa-heart"></i></a></li>
                             <li class="product-cart">
                                 <a href="#" class="cart-icon" id="toggleButton"><i
@@ -146,7 +137,6 @@ $PageIndex = "home";
             <div class="mega-menu-wrapper">
                 <div class="container">
                     <div class="wrapper-items d-flex align-items-center">
-                        <!-- menu start here -->
                         <div class="header-item item-left">
                             <div class="menu-overlay">
                             </div>
@@ -157,16 +147,6 @@ $PageIndex = "home";
                                     <div class="mobile-menu-close"><i class="fa-solid fa-x"></i></div>
                                 </div>
                                 <ul class="menu-items">
-                                    <!-- <li class="menu-item-has-children">
-                                        <a href="#" class="nav-link  active ">Home <i class="fa fa-angle-down"></i></a>
-                                        <div class="sub-menu single-column-menu">
-                                            <ul>
-                                                <li><a href="index-2.php">Home One</a></li>
-                                                <li><a href="index_2.php">Home two</a></li>
-                                                <li><a href="index_3.php">Home three</a></li>
-                                            </ul>
-                                        </div>
-                                    </li> -->
                                     <li>
                                         <a href="#">Home</a>
                                     </li>
@@ -286,9 +266,6 @@ $PageIndex = "home";
                                                     <li><a href="all-collections.php">All Collections</a></li>
                                                 </ul>
                                             </div>
-                                            <!-- <div class="list-item">
-                                                <img src="images/header/product/shape-1.png" alt="header">
-                                            </div> -->
                                         </div>
                                     </li>
                                     <li>
@@ -297,7 +274,6 @@ $PageIndex = "home";
                                 </ul>
                             </nav>
                         </div>
-                        <!-- menu end here -->
                         <div class="header-item item-right">
                             <a href="#"><i class="fa-solid fa-headset"></i>Help & Support</a>
                             <div class="mobile-menu-trigger">
@@ -309,19 +285,9 @@ $PageIndex = "home";
             </div>
         </div>
     </header>
-
-    <!-- HEADER-SECTION END  -->
-
-    <!-- BANNER-SECTION START  -->
-
     <?php
     require ("./components/banner.php");
     ?>
-
-    <!-- BANNER-SECTION END  -->
-
-    <!-- INTR0-SECTION START  -->
-
     <section class="intro-section">
         <div class="container">
             <div class="intro-items">
@@ -364,11 +330,6 @@ $PageIndex = "home";
             </div>
         </div>
     </section>
-
-    <!-- INTR0-SECTION END  -->
-
-    <!-- CATAGORIES-SECTION START  -->
-
     <section class="categories-section">
         <div class="container">
             <div class="ev-top-content">
@@ -381,11 +342,8 @@ $PageIndex = "home";
                 <?php
                 $Query = "SELECT categories, items, image FROM topcategories1 WHERE status = 1 ";
                 $result = mysqli_query($conn, $Query);
-
                 if ($result->num_rows > 0) {
-
                     while ($row = mysqli_fetch_array($result)) {
-
                         ?>
                         <div class="single-categorie">
                             <a href="shop-with-sidebar.php" class="categorie-link">
@@ -412,11 +370,6 @@ $PageIndex = "home";
             <a href="shop-with-sidebar.php" class="view-all">View All</a>
         </div>
     </section>
-
-    <!-- CATAGORIES-SECTION END  -->
-
-    <!-- COLLECTION-SECTION START  -->
-
     <section class="collection-section">
         <div class="container">
             <div class="ev-top-content">
@@ -424,7 +377,6 @@ $PageIndex = "home";
                 <h2>Products Are on Sale</h2>
                 <p>Explore unbeatable deals on top-quality products! Shop now and elevate
                     your experience!</p>
-
             </div>
             <div class="collection-items">
                 <div class="collection-column">
@@ -520,11 +472,6 @@ $PageIndex = "home";
             </div>
         </div>
     </section>
-
-    <!-- COLLECTION-SECTION END  -->
-
-    <!-- `PRODUCT-SECTION START  -->
-
     <section class="product-section">
         <div class="container">
             <div class="ev-top-content">
@@ -545,12 +492,8 @@ $PageIndex = "home";
                             Featured</a></li>
                 </ul>
             </div>
-
-
             <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-
-                    <!-- Sale Recent Product Section Start -->
                     <div class="products ev-products">
                         <?php
                         $Query = "SELECT * FROM sale WHERE catageory = 'recent'";
@@ -558,7 +501,6 @@ $PageIndex = "home";
                         if ($result->num_rows > 0) {
                             while ($row = mysqli_fetch_array($result)) {
                                 ?>
-                                <!-- Single Product -->
                                 <div class="product">
                                     <div class="product-img">
                                         <a href="single-product.php">
@@ -606,14 +548,8 @@ $PageIndex = "home";
                             echo 'Data Not Found';
                         }
                         ?>
-                        <!-- Single Product End -->
-
                     </div>
-
-                    <!-- Sale Recent Product Section End -->
                 </div>
-
-                <!-- Sale Popular Product Start -->
                 <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                     <div class="products ev-products">
                         <?php
@@ -622,7 +558,6 @@ $PageIndex = "home";
                         if ($result->num_rows > 0) {
                             while ($row = mysqli_fetch_array($result)) {
                                 ?>
-                                <!-- Single Product -->
                                 <div class="product">
                                     <div class="product-img">
                                         <a href="single-product.php">
@@ -672,15 +607,7 @@ $PageIndex = "home";
                         }
                         ?>
                     </div>
-                    <!-- Single Product End -->
-
                 </div>
-
-                <!-- Sale Popular Product End -->
-
-
-                <!-- Sale Top Product Start -->
-
                 <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
                     <div class="products ev-products">
                         <?php
@@ -689,7 +616,6 @@ $PageIndex = "home";
                         if ($result->num_rows > 0) {
                             while ($row = mysqli_fetch_array($result)) {
                                 ?>
-                                <!-- Single Product -->
                                 <div class="product">
                                     <div class="product-img">
                                         <a href="single-product.php">
@@ -740,18 +666,11 @@ $PageIndex = "home";
                         ?>
                     </div>
                 </div>
-                <!-- Sale Top Product End -->
-
             </div>
         </div>
         <a href="shop-with-sidebar.php" class="view-all">View All</a>
         </div>
     </section>
-
-    <!-- PRODUCT-SECTION END  -->
-
-    <!--    FEATURED-PRODUCT-SECTION START  -->
-
     <section class="featured-product-section">
         <div class="container">
             <div class="row">
@@ -759,9 +678,10 @@ $PageIndex = "home";
                     <div class="pr-featured-left">
                         <h6>50% Discount Running</h6>
                         <h2>Double Protection Face Mask</h2>
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur.
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                        <p>Introducing our Double Protection Face Mask, designed to provide an extra layer of defense in
+                            today's challenging environment. Crafted with premium materials and innovative technology,
+                            this mask offers dual-layer protection to safeguard you against airborne particles and
+                            germs.
                         </p>
                         <ul class="d-flex align-items-center">
                             <li><span>$5</span></li>
@@ -783,11 +703,6 @@ $PageIndex = "home";
             </div>
         </div>
     </section>
-
-    <!--    FEATURED-PRODUCT-SECTION END  -->
-
-    <!--    FEATURED-COLLECTION-SECTION START  -->
-
     <section class="featured-collection-section">
         <div class="container-fluid">
             <div class="collection-grid">
@@ -817,17 +732,12 @@ $PageIndex = "home";
             </div>
         </div>
     </section>
-
-    <!--    FEATURED-COLLECTION-SECTION END  -->
-
-    <!--    POPULAR-PRODUCT-SECTION START  -->
-
     <section class="popular-product-section">
         <div class="container">
             <div class="ev-top-content">
                 <span>Find One from Here</span>
                 <h2>Top Products</h2>
-                <p>When the musics over turn off the lig lore magn epteur sint occaecat cupidatat non proide</p>
+                <p>Discover our handpicked Top Products for excellence in style, quality, and performance.</p>
             </div>
             <div class="swiper products">
                 <div class="product-slider">
@@ -1026,11 +936,6 @@ $PageIndex = "home";
             </div>
         </div>
     </section>
-
-    <!--    POPULAR-PRODUCT-SECTION END  -->
-
-    <!--    BRAND-SECTION START  -->
-
     <section class="brand-section">
         <div class="container">
             <div class="brand-heading">
@@ -1087,17 +992,12 @@ $PageIndex = "home";
             </div>
         </div>
     </section>
-
-    <!--    BRAND-SECTION END  -->
-
-    <!--    TESTIMONIAL-SECTION START  -->
-
     <section class="testimonial-section">
         <div class="container">
             <div class="ev-top-content">
                 <span>Testimonials</span>
                 <h2>What People Say About us</h2>
-                <p>When the musics over turn off the lig lore magn epteur sint occaecat cupidatat non proide</p>
+                <p>See what others are saying about us!</p>
             </div>
             <div class="swiper testimonial-slider testimonial-items">
                 <div class="swiper-wrapper">
@@ -1138,111 +1038,6 @@ $PageIndex = "home";
                         echo "Data Not FOund";
                     }
                     ?>
-                    <!-- <div class="swiper-slide single-testimonial">
-                        <div class="testimonial-author d-flex align-items-center justify-content-between">
-                            <div class="author-bio d-flex align-items-center">
-                                <div class="author-img">
-                                    <img src="images/index-1/testimonial/author-4.png" alt="testimonial">
-                                </div>
-                                <div class="author-text">
-                                    <h6>Sharmin Eity</h6>
-                                    <span>Journalist</span>
-                                </div>
-                            </div>
-                            <div class="quote-icon">
-                                <img src="images/index-1/testimonial/quot/shape-4.png" alt="testimonial">
-                            </div>
-                        </div>
-                        <div class="testimonial-text">
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt ming
-                                elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide single-testimonial">
-                        <div class="testimonial-author d-flex align-items-center justify-content-between">
-                            <div class="author-bio d-flex align-items-center">
-                                <div class="author-img">
-                                    <img src="images/index-1/testimonial/author-5.png" alt="testimonial">
-                                </div>
-                                <div class="author-text">
-                                    <h6>Tom Anderson</h6>
-                                    <span>Web Developer</span>
-                                </div>
-                            </div>
-                            <div class="quote-icon">
-                                <img src="images/index-1/testimonial/quot/shape-5.png" alt="testimonial">
-                            </div>
-                        </div>
-                        <div class="testimonial-text">
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt ming
-                                elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide single-testimonial">
-                        <div class="testimonial-author d-flex align-items-center justify-content-between">
-                            <div class="author-bio d-flex align-items-center">
-                                <div class="author-img">
-                                    <img src="images/index-1/testimonial/author-6.png" alt="testimonial">
-                                </div>
-                                <div class="author-text">
-                                    <h6>Nayna Eva</h6>
-                                    <span>Photographer</span>
-                                </div>
-                            </div>
-                            <div class="quote-icon">
-                                <img src="images/index-1/testimonial/quot/shape-6.png" alt="testimonial">
-                            </div>
-                        </div>
-                        <div class="testimonial-text">
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt ming
-                                elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide single-testimonial">
-                        <div class="testimonial-author d-flex align-items-center justify-content-between">
-                            <div class="author-bio d-flex align-items-center">
-                                <div class="author-img">
-                                    <img src="images/index-1/testimonial/author-7.png" alt="testimonial">
-                                </div>
-                                <div class="author-text">
-                                    <h6>Sharmin Eity</h6>
-                                    <span>Journalist</span>
-                                </div>
-                            </div>
-                            <div class="quote-icon">
-                                <img src="images/index-1/testimonial/quot/shape-7.png" alt="testimonial">
-                            </div>
-                        </div>
-                        <div class="testimonial-text">
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt ming
-                                elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide single-testimonial">
-                        <div class="testimonial-author d-flex align-items-center justify-content-between">
-                            <div class="author-bio d-flex align-items-center">
-                                <div class="author-img">
-                                    <img src="images/index-1/testimonial/author-8.png" alt="testimonial">
-                                </div>
-                                <div class="author-text">
-                                    <h6>Tom Anderson</h6>
-                                    <span>Web Developer</span>
-                                </div>
-                            </div>
-                            <div class="quote-icon">
-                                <img src="images/index-1/testimonial/quot/shape-8.png" alt="testimonial">
-                            </div>
-                        </div>
-                        <div class="testimonial-text">
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt ming
-                                elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-                        </div>
-                    </div>  -->
                 </div>
                 <div class="swiper-button-next hero-slide-btn testimonial-slide-btn">
                     <i class="fa-solid fa-arrow-right"></i>
@@ -1253,17 +1048,13 @@ $PageIndex = "home";
             </div>
         </div>
     </section>
-
-    <!--    TESTIMONIAL-SECTION END  -->
-
-    <!--    NEWS-SECTION START  -->
-
     <section class="news-section">
         <div class="container">
             <div class="ev-top-content">
                 <span>Latest News</span>
                 <h2>From Our Blog</h2>
-                <p>When the musics over turn off the lig lore magn epteur sint occaecat cupidatat non proide</p>
+                <p>Stay updated with the latest insights and trends. Dive into our blog for fresh perspectives and
+                    expert advice.</p>
             </div>
             <div class="swiper news-slider">
                 <div class="swiper-wrapper">
@@ -1338,30 +1129,10 @@ $PageIndex = "home";
             </div>
         </div>
     </section>
-
-    <!--    NEWS-SECTION END  -->
-
-
-    <!--    FOOTER-SECTION START -->
-
-
     <?php require ("./components/footer.php"); ?>
-
-
-
-    <!-- FOOTER-SECTION END  -->
-
-
-    <!--    FOOTER-ICONTOP START  -->
-
     <div class="footer_iconTop">
         <a href="#" id="button"><i class="fa-solid fa-arrow-up"></i></a>
     </div>
-
-
-    <!--    FOOTER-ICONTOP END  -->
-
-
     <script src="js/jquery-min.js"></script>
     <script src="js/jquery-ui.js"></script>
     <script src="js/popper.js"></script>

@@ -72,13 +72,6 @@
                                             } else {
                                                 echo "";
                                             } ?> ">Home <i class="fa fa-angle-down"></i></a>
-                                            <!-- <div class="sub-menu single-column-menu">
-                                                <ul>
-                                                    <li><a href="index-2.php">Home One</a></li>
-                                                    <li><a href="index_2.php">Home two</a></li>
-                                                    <li><a href="index_3.php">Home three</a></li>
-                                                </ul>
-                                            </div> -->
                                         </li>
                                         <li class="menu-item-has-children">
                                             <a href="#" class="nav-link <?php if ($PageIndex == 'shop') {
