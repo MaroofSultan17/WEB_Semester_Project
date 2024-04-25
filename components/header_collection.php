@@ -12,25 +12,8 @@
                     <li><a href="#"><i class="fa-sharp fa-solid fa-location-dot"></i>Locate Our Shop</a></li>
                 </ul>
             </div>
-
             <div class="top-bar-social d-flex align-items-center">
                 <ul class="view-switcher d-flex align-items-center">
-                    <!-- <li>
-                        <span>usd<i class="fa-solid fa-angle-down"></i></span>
-                        <ul class="evani-curency">
-                            <li><a href="#">euro</a></li>
-                            <li><a href="#">tk</a></li>
-                            <li><a href="#">usd</a></li>
-                        </ul>
-                    </li> -->
-                    <!-- <li>
-                        <span>en<i class="fa-solid fa-angle-down"></i></span>
-                        <ul class="evani-curency">
-                            <li><a href="#">english</a></li>
-                            <li><a href="#">bangla</a></li>
-                            <li><a href="#">jerman</a></li>
-                        </ul>
-                    </li> -->
                 </ul>
                 <ul class="social-icon d-flex align-items-center" style="padding:10px;">
                     <li><a href="<?php echo constant('facebook'); ?>"><i class="fa-brands fa-facebook-f"></i></a></li>
@@ -39,7 +22,6 @@
                     <li><a href="<?php echo constant('youtube'); ?>"><i class="fa-brands fa-youtube"></i></a></li>
                 </ul>
             </div>
-
         </div>
     </div>
     <div class="header-middle sticky-header">
@@ -143,7 +125,8 @@
                                                 echo "active";
                                             } else {
                                                 echo "";
-                                            } ?>">Collections <i
+                                            } ?>">
+                                                Collections <i
                                                     class="fa fa-angle-down nav-icon  d-lg-none d-md-block"></i></a>
                                             <div class="sub-menu mega-menu mega-menu-column-4">
                                                 <div class="list-item text-center">
@@ -169,55 +152,6 @@
                                                         <img src="images/header/collection/shape-4.png" alt="header">
                                                         <h4 class="title">Night Gown</h4>
                                                     </a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="#" class="nav-link <?php if ($PageIndex == 'pages') {
-                                                echo "active";
-                                            } else {
-                                                echo "";
-                                            } ?>">Pages <i
-                                                    class="fas fa-angle-down nav-icon d-lg-none d-md-block"></i></a>
-                                            <div class="sub-menu mega-menu mega-menu-column-4">
-                                                <div class="list-item">
-                                                    <h4 class="title">Home Page</h4>
-                                                    <ul>
-                                                        <li><a href="index.php">Home One</a></li>
-                                                        <!-- <li><a href="index_2.php">Home Two</a></li>
-                                                        <li><a href="index_3.php">Home Three</a></li> -->
-                                                    </ul>
-                                                    <h4 class="title">Shop Page</h4>
-                                                    <ul>
-                                                        <li><a href="shop.php">Shop</a></li>
-                                                        <li><a href="shop-with-sidebar.php">Shop With Sidebar</a>
-                                                        </li>
-                                                        <li><a href="shopping-cart.php">Shopping Cart</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="list-item">
-                                                    <h4 class="title">Collection Page</h4>
-                                                    <ul>
-                                                        <li><a href="collections.php">Collections</a></li>
-                                                        <li><a href="all-collections.php">All Collections</a></li>
-                                                    </ul>
-                                                    <h4 class="title">Product Page</h4>
-                                                    <ul>
-                                                        <li><a href="single-product.php">Single Product</a></li>
-                                                        <li><a href="checkout.php">Checkout</a></li>
-                                                        <li><a href="wishlist.php">Wishlist</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="list-item">
-                                                    <h4 class="title">Blog Page</h4>
-                                                    <ul>
-                                                        <li><a href="recent-blog.php">Recent Blog</a></li>
-                                                        <li><a href="recent-blog-two.php">Recent Blog Two</a></li>
-                                                        <li><a href="single-blog.php">Single Blog</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="list-item">
-                                                    <img src="images/header/product/shape-1.png" alt="product">
                                                 </div>
                                             </div>
                                         </li>

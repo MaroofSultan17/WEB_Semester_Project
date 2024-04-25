@@ -6,15 +6,9 @@ include ("./helper/db-config.php");
 <html lang="en">
 
 <head>
-    <title>
-        <?php echo (constant('siteTitle')); ?>
+    <title> Main | <?php echo (constant('siteTitle')); ?>
     </title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php
-    echo require ("./components/links.php");
-    ?>
+    <?php require ("./components/links.php"); ?>
 </head>
 
 <body>
@@ -99,9 +93,6 @@ include ("./helper/db-config.php");
                                     </div>
                                 </div>
                             </li>
-
-                            <!-- Login Section Start -->
-
                             <li>
                                 <a class="log-in header-popup log-in-btn d-flex align-items-center" id="header-popup1"
                                     href="#"><span class="log-in-text">log in</span><i class="fa-solid fa-user"></i></a>
@@ -134,14 +125,7 @@ include ("./helper/db-config.php");
                                     </div>
                                 </div>
                             </li>
-
-                            <!-- Login Section End -->
-
-
-                            <!-- Signup Section Start -->
-
                             <li>
-
                                 <a class="sign-up header-popup d-flex align-items-center" id="header-popup2"
                                     href="#"><span class="log-in-text">sign
                                         up</span></a>
@@ -187,10 +171,6 @@ include ("./helper/db-config.php");
                                     </div>
                                 </div>
                             </li>
-
-
-                            <!-- Signup Section End -->
-
                             <li><a href="#"><i class="fa-solid fa-heart"></i></a></li>
                             <li class="product-cart">
                                 <a href="#" class="cart-icon" id="toggleButton"><i
@@ -334,45 +314,6 @@ include ("./helper/db-config.php");
                                                     <img src="images/header/collection/shape-4.png" alt="header">
                                                     <h4 class="title">Night Gown</h4>
                                                 </a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="menu-item-has-children">
-                                        <a href="#" class="nav-link">Pages <i class="fas fa-angle-down"></i></a>
-                                        <div class="sub-menu mega-menu mega-menu-column-4">
-                                            <div class="list-item">
-                                                <h4 class="title">Home Page</h4>
-
-                                                <h4 class="title">Shop Page</h4>
-                                                <ul>
-                                                    <li><a href="shop.php">Shop</a></li>
-                                                    <li><a href="shop-with-sidebar.php">Shop With Sidebar</a></li>
-                                                    <li><a href="shopping-cart.php">Shopping Cart</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="list-item">
-                                                <h4 class="title">Collection Page</h4>
-                                                <ul>
-                                                    <li><a href="collections.php">Collections</a></li>
-                                                    <li><a href="all-collections.php">All Collections</a></li>
-                                                </ul>
-                                                <h4 class="title">Product Page</h4>
-                                                <ul>
-                                                    <li><a href="single-product.php">Single Product</a></li>
-                                                    <li><a href="checkout.php">Checkout</a></li>
-                                                    <li><a href="wishlist.php">Wishlist</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="list-item">
-                                                <h4 class="title">Blog Page</h4>
-                                                <ul>
-                                                    <li><a href="recent-blog.php">Recent Blog</a></li>
-                                                    <li><a href="recent-blog-two.php">Recent Blog Two</a></li>
-                                                    <li><a href="single-blog.php">Single Blog</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="list-item">
-                                                <img src="images/header/product/shape-1.png" alt="header">
                                             </div>
                                         </div>
                                     </li>

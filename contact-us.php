@@ -1,34 +1,17 @@
-<?php include ("./libraries/variables.php"); ?>
 <?php
-
-$PageIndex = "contact";
-
+include ("./libraries/variables.php");
+include ("./helper/db-config.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Contact Us |
-        <?php echo (constant('siteTitle')); ?>
-    </title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php
-    echo require ("./components/links.php");
-    ?>
+    <title> Contact Us | <?php echo (constant('siteTitle')); ?> </title>
+    <?php require ("./components/links.php"); ?>
 </head>
 
 <body>
-
-    <!-- HEADER-SECTION START  -->
-
     <?php require ("./components/header_collection.php"); ?>
-
-    <!-- HEADER-SECTION END  -->
-
-    <!-- BANNER-SECTION START  -->
-
     <section class="hero-section ev-common-hero" style="background-image: url(images/common-banner/shape-1.png);">
         <div class="container-fluid">
             <div class="ev-hero-content">
@@ -37,12 +20,6 @@ $PageIndex = "contact";
             </div>
         </div>
     </section>
-
-    <!-- BANNER-SECTION END  -->
-
-
-    <!--  CONTACT-US-SECTION START  -->
-
     <section class="ev-contact-us-section">
         <div class="container">
             <div class="ev-top-content justify-content-md-center justify-content-sm-start">
@@ -52,16 +29,19 @@ $PageIndex = "contact";
             <div class="row">
                 <div class="col-xl-6 col-md-6 col-12">
                     <div class="contact-left">
-                        <div class="contact-inner">
-                            <p>Kimod tempoer incididunt onomes sundo ritoma amar korem ipsum
-                                dolor sit amet, consectetur adipisicing elit, sed do eiusm od tempor inci didunt </p>
+                        <div class="contact-inner" style="text-align: justify;">
+                            <p>Stay connected with us! Whether you have questions, feedback, or simply want to say
+                                hello, we're here to listen. Reach out through our contact form or connect with us on
+                                social media to stay updated on the latest news, promotions, and exciting updates. Your
+                                voice matters, and we're always eager to hear from you. Let's stay connected and
+                                continue building meaningful relationships together.
                             <ul>
                                 <li>
                                     <a href="#" class="d-flex align-items-center">
                                         <i class="fa-solid fa-location-dot"></i>
                                         <div class="inner-text">
                                             <h6>Address</h6>
-                                            <span>20, Mountain Street, Dhaka</span>
+                                            <span><?php echo constant('address'); ?></span>
                                         </div>
                                     </a>
                                 </li>
@@ -70,7 +50,7 @@ $PageIndex = "contact";
                                         <i class="fa-solid fa-phone"></i>
                                         <div class="inner-text">
                                             <h6>Call us</h6>
-                                            <span>+880 1234 567890</span>
+                                            <span><?php echo constant('siteContact'); ?></span>
                                         </div>
                                     </a>
                                 </li>
@@ -79,7 +59,7 @@ $PageIndex = "contact";
                                         <i class="fa-regular fa-envelope"></i>
                                         <div class="inner-text">
                                             <h6>Email Us</h6>
-                                            <span>hello@evani.com</span>
+                                            <span><?php echo constant('siteEmail'); ?></span>
                                         </div>
                                     </a>
                                 </li>
@@ -92,30 +72,35 @@ $PageIndex = "contact";
                         <div class="form-message">
                             <p></p>
                         </div>
-                        <form class="contuct-form" id="evani-contact" method="POST"
-                            action="https://ethemestudio.com/demo/evani/php/form-handler.php">
+                        <form class="contuct-form" id="evani-contact" method="POST" action="./helper/contactus.php">
                             <div class="row form-group">
                                 <div class="col-12">
                                     <label for="inputName" class="form-label visually-hidden">Name</label>
-                                    <input placeholder="Your name" name="inputName" id="inputName" required>
+                                    <input placeholder="Your name" name="contactusname" id="inputName" required>
                                 </div>
                                 <div class="col-12">
                                     <label for="inputEmail" class="form-label visually-hidden">Email</label>
-                                    <input type="email" placeholder="Your email" name="inputEmail" id="inputEmail"
+                                    <input type="email" placeholder="Your email" name="contactusemail" id="inputEmail"
                                         required>
                                 </div>
                                 <div class="col-12">
                                     <label for="inputPhone" class="form-label visually-hidden">Phone</label>
-                                    <input placeholder="Your phone" name="inputPhone" id="inputPhone">
+                                    <input placeholder="Your phone" name="contactusphno" id="inputPhone">
+                                </div>
+                                <div class="col-12">
+                                    <label for="subject" class="form-label visually-hidden">Subject</label>
+                                    <input type="text" placeholder="Your Subject" name="contactussubject" id="subject"
+                                        required>
                                 </div>
                                 <div class="col-12">
                                     <label for="inputMessage" class="form-label visually-hidden">Message</label>
-                                    <textarea class="input-textarea" name="inputMessage" rows="5" cols="30"
-                                        id="inputMessage" required>Write your message here</textarea>
+                                    <textarea class="input-textarea" name="contactusmessage" rows="5" cols="30"
+                                        id="inputMessage" placeholder="Write your message here" required></textarea>
                                 </div>
                                 <div class="col-12">
                                     <div class="common-btn submit-btn">
-                                        <button type="submit" value="Submit Payment" name="submit">Submit Now</button>
+                                        <button type="submit" value="Submit Payment" name="contactus">Submit
+                                            Now</button>
                                     </div>
                                 </div>
                             </div>
@@ -125,12 +110,6 @@ $PageIndex = "contact";
             </div>
         </div>
     </section>
-
-    <!--  CONTACT-US-SECTION END  -->
-
-
-    <!-- CONTACT-MAP-SECTION START  -->
-
     <div class="map-section">
         <div class="container">
             <div class="map-heading">
@@ -139,48 +118,11 @@ $PageIndex = "contact";
             <div id="map"></div>
         </div>
     </div>
-
-    <!-- CONTACT-MAP-SECTION START  -->
-
-
-    <!--    FOOTER-SECTION START -->
-
     <?php require ("./components/footer.php"); ?>
-
-    <!--    FOOTER-SECTION END  -->
-
-
-    <!-- FOOTER-ICONTOP START  -->
-
     <div class="footer_iconTop">
         <a href="#" id="button"><i class="fa-solid fa-arrow-up"></i></a>
     </div>
-
-    <!-- FOOTER-ICONTOP END  -->
-
-
-    <!-- JS-SCRIPT START  -->
-
-    <script src="js/jquery-min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/bootstrop-min.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/swiper.js"></script>
-    <script src="js/mmenu.js"></script>
-    <script src="js/leaflet.js"></script>
-    <script src="js/script.js"></script>
-
-    <script>
-
-
-
-    </script>
-
-    <!-- JS-SCRIPT END  -->
-
-
+    <?php require ("./components/script.php"); ?>
 </body>
-
-
 
 </html>

@@ -1,64 +1,336 @@
 <?php
-
-// include ("./helper/session.php");
-// include ("./helper/db-config.php");
-include ("./libraries/variables.php"); ?>
+include ("./libraries/variables.php");
+include ("./helper/db-config.php");
+?>
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="css/awesome.min.css">
-
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-
-    <link rel="stylesheet" href="css/swiper.min.css">
-
-    <link rel="stylesheet" href="css/unpkg.swiper.css">
-
-    <link rel="stylesheet" type="text/css" href="css/leaflet.css">
-
-    <link rel="stylesheet" href="css/animate.min.css">
-
-    <link rel="stylesheet" href="css/webfonts/all.min.css">
-
-    <link rel="stylesheet" href="css/webfonts/fontawesome.min.css">
-
-    <link rel="stylesheet" href="css/style.css">
-
-    <title> Evani E-commerce Template</title>
-
-    <link rel="icon" href="images/head/logo/shape-1.png">
-
+    <title> Single Product | <?php echo (constant('siteTitle')); ?>
+    </title>
+    <?php require ("./components/links.php"); ?>
 </head>
 
 <body>
+    <header class="header-section header-section-two">
+        <div class="top-bar" id="d-hide">
+            <div class="container d-flex align-items-center justify-content-between">
+                <div class="top-bar-contact d-flex align-items-center">
+                    <ul class="d-flex align-items-center">
+                        <li><a href="#"><i class="fa-solid fa-phone"></i>+123 456 7890</a></li>
+                        <li><a href="#"><i class="fa-regular fa-envelope"></i>hello@evani.com</a></li>
+                        <li><a href="#"><i class="fa-sharp fa-solid fa-location-dot"></i>Locate Our Shop</a></li>
+                    </ul>
+                </div>
+                <div class="top-bar-social d-flex align-items-center">
+                    <ul class="view-switcher d-flex align-items-center">
+                        <li>
+                            <span>usd<i class="fa-solid fa-angle-down"></i></span>
+                            <ul class="evani-curency">
+                                <li><a href="#">euro</a></li>
+                                <li><a href="#">tk</a></li>
+                                <li><a href="#">usd</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>en<i class="fa-solid fa-angle-down"></i></span>
+                            <ul class="evani-curency">
+                                <li><a href="#">english</a></li>
+                                <li><a href="#">bangla</a></li>
+                                <li><a href="#">jerman</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="social-icon d-flex align-items-center">
+                        <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                        <li><a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header-middle sticky-header">
+            <div class="container d-flex align-items-center justify-content-between">
+                <div class="header-middle-left">
+                    <div class="evani-brand">
+                        <a href="index-2.html">
+                            <img src="images/header/logo/logo.png" alt="logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="header-middle-right d-flex align-items-center">
+                    <div class="mega-menu-wrapper">
+                        <div class="container">
+                            <div class="wrapper-items">
+                                <div class="header-item item-left">
+                                    <div class="menu-overlay">
+                                    </div>
+                                    <nav class="nav-menu">
+                                        <div class="mobile-menu-head">
+                                            <div class="go-back"><i class="fa fa-angle-left"></i></div>
+                                            <div class="current-menu-title"></div>
+                                            <div class="mobile-menu-close"><i class="fa-solid fa-x"></i></div>
+                                        </div>
+                                        <ul class="menu-items">
+                                            <li class="menu-item-has-children">
+                                                <a href="#" class="nav-link  active ">Home <i
+                                                        class="fa fa-angle-down"></i></a>
+                                                <div class="sub-menu single-column-menu">
+                                                    <ul>
+                                                        <li><a href="index-2.html">Home One</a></li>
+                                                        <li><a href="index_2.html">Home two</a></li>
+                                                        <li><a href="index_3.html">Home three</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="menu-item-has-children">
+                                                <a href="#" class="nav-link">Shop <i
+                                                        class="fa fa-angle-down nav-icon d-lg-none d-md-block"></i></a>
+                                                <div class="sub-menu mega-menu mega-menu-column-4">
+                                                    <div class="list-item">
+                                                        <h4 class="title">Men's Fashion</h4>
+                                                        <ul>
+                                                            <li><a href="shop-with-sidebar.html">Men's T-Shirt</a></li>
+                                                            <li><a href="shop-with-sidebar.html">Men's Suit</a></li>
+                                                            <li><a href="shop-with-sidebar.html">Casual Shirts</a></li>
+                                                            <li><a href="shop-with-sidebar.html">Men's Jeans</a></li>
+                                                            <li><a href="shop-with-sidebar.html">Men's shoes</a></li>
+                                                        </ul>
+                                                        <h4 class="title">Men's Beauty</h4>
+                                                        <ul>
+                                                            <li><a href="shop-with-sidebar.html">Face Care</a></li>
+                                                            <li><a href="shop-with-sidebar.html">Hair care</a></li>
+                                                            <li><a href="shop-with-sidebar.html">Body care</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="list-item">
+                                                        <h4 class="title">Women's Fashion</h4>
+                                                        <ul>
+                                                            <li><a href="shop-with-sidebar.html">Night Gown</a></li>
+                                                            <li><a href="shop-with-sidebar.html">Soft Towel</a></li>
+                                                            <li><a href="shop-with-sidebar.html">Fashion Dress</a></li>
+                                                            <li><a href="shop-with-sidebar.html">Women's Bag</a></li>
+                                                        </ul>
+                                                        <h4 class="title">Women's Beauty</h4>
+                                                        <ul>
+                                                            <li><a href="shop-with-sidebar.html">Face Care</a></li>
+                                                            <li><a href="shop-with-sidebar.html">Lip Make-up</a></li>
+                                                            <li><a href="shop-with-sidebar.html">Hand care</a></li>
+                                                            <li><a href="shop-with-sidebar.html">Cross-body Bags</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="list-item">
+                                                        <h4 class="title">Home, Kitchen</h4>
+                                                        <ul>
+                                                            <li><a href="shop-with-sidebar.html">Kitchen Appliances</a>
+                                                            </li>
+                                                            <li><a href="shop-with-sidebar.html">Lights & Electrical</a>
+                                                            </li>
+                                                            <li><a href="shop-with-sidebar.html">Basket & Bucket</a>
+                                                            </li>
+                                                            <li><a href="shop-with-sidebar.html">Kitchen Accessories</a>
+                                                            </li>
+                                                            <li><a href="shop-with-sidebar.html">Box & Container</a>
+                                                            </li>
+                                                            <li><a href="shop-with-sidebar.html">Disposables</a></li>
+                                                            <li><a href="shop-with-sidebar.html">Rack & Organizer</a>
+                                                            </li>
+                                                            <li><a href="shop-with-sidebar.html">Gardening</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="list-item">
+                                                        <img src="images/header/shop/shape-1.png" alt="shop">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="menu-item-has-children">
+                                                <a href="#" class="nav-link">Collections <i
+                                                        class="fa fa-angle-down nav-icon  d-lg-none d-md-block"></i></a>
+                                                <div class="sub-menu mega-menu mega-menu-column-4">
+                                                    <div class="list-item text-center">
+                                                        <a href="collections.html">
+                                                            <img src="images/header/collection/shape-1.png"
+                                                                alt="header">
+                                                            <h4 class="title">Men's T-Shirt</h4>
+                                                        </a>
+                                                    </div>
+                                                    <div class="list-item text-center">
+                                                        <a href="collections.html">
+                                                            <img src="images/header/collection/shape-2.png"
+                                                                alt="header">
+                                                            <h4 class="title">Women's Bag</h4>
+                                                        </a>
+                                                    </div>
+                                                    <div class="list-item text-center">
+                                                        <a href="collections.html">
+                                                            <img src="images/header/collection/shape-3.png"
+                                                                alt="header">
+                                                            <h4 class="title">Ball Gown</h4>
+                                                        </a>
+                                                    </div>
+                                                    <div class="list-item text-center">
+                                                        <a href="collections.html">
+                                                            <img src="images/header/collection/shape-4.png"
+                                                                alt="header">
+                                                            <h4 class="title">Night Gown</h4>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="contact-us.html" class="nav-link">Contact</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="header-item item-right">
+                                    <div class="mobile-menu-trigger">
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner-wrapper text-end">
+                        <ul class="d-flex align-items-center">
+                            <li class="search-popup">
+                                <a class="header-popup d-flex align-items-center" id="header-popup" href="#"><span
+                                        class="log-in-text"></span><i class="fa-solid fa-magnifying-glass"></i></a>
+                                <div class="popup-wraper">
+                                    <div class="view-popup">
+                                        <label class="close-btn fas fa-times popup-label"></label>
+                                        <label class="la-search-pr">Search Product</label>
+                                        <form class="search-product d-flex align-items-center justify-content-between"
+                                            method="GET">
+                                            <input type="text" name="search"
+                                                placeholder="Type to search i.e â€œsunglassâ€...">
+                                            <button type="submit">
+                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="log-in header-popup log-in-btn d-flex align-items-center" id="header-popup1"
+                                    href="#"><span class="log-in-text">log in</span><i class="fa-solid fa-user"></i></a>
+                                <div class="popup-wraper1">
+                                    <div class="view-popup">
+                                        <label class="close-btn fas fa-times popup-label"></label>
+                                        <h6>Login</h6>
 
-    <!-- HEADER-SECTION START  -->
+                                        <form action="https://ethemestudio.com/demo/evani/login.php" method="POST">
+                                            <div class="d-block">
+                                                <label>Username:</label>
+                                                <input type="text" name="username" required>
+                                            </div>
+                                            <div class="d-block">
+                                                <label>Password:</label>
+                                                <input type="text" name="password" required>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div class="check-box d-flex align-items-center">
+                                                    <input type="checkbox" name="remember">
+                                                    <label>Remember me</label>
+                                                </div>
+                                                <a href="#">Forgot Password?</a>
+                                            </div>
+                                            <div class="popup-btn">
+                                                <button class="popup-link" type="submit">Login</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="sign-up header-popup d-flex align-items-center" id="header-popup2"
+                                    href="#"><span class="log-in-text">sign up</span></a>
+                                <div class="popup-wraper2">
+                                    <div class="view-popup">
+                                        <label class="close-btn fas fa-times popup-label"></label>
+                                        <h6>Sign Up</h6>
 
-
-    <?php require ("./components/header_collection.php"); ?>
-
-
-    <!-- HEADER-SECTION END  -->
-
-    <!-- BANNER-SECTION START  -->
-
+                                        <form>
+                                            <div class="d-block">
+                                                <label>Username:</label>
+                                                <input type="text" name="username" required>
+                                            </div>
+                                            <div class="d-block">
+                                                <label>Password:</label>
+                                                <input type="text" name="password" required>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div class="check-box d-flex align-items-center">
+                                                    <input type="checkbox" name="remember">
+                                                    <label>Remember me</label>
+                                                </div>
+                                                <a href="#">Forgot Password?</a>
+                                            </div>
+                                            <div class="popup-btn">
+                                                <button class="popup-link" type="submit">Register</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="#"><i class="fa-solid fa-heart"></i></a></li>
+                            <li class="product-cart">
+                                <a href="#" class="cart-icon" id="toggleButton"><i
+                                        class="fa-solid fa-cart-shopping"></i><span class="cart-number">0</span></a>
+                                <div class="view-cart content" id="content">
+                                    <div class="cart-title d-flex align-items-center justify-content-between">
+                                        <span class="product-item">1 ITEM</span>
+                                        <a href="shopping-cart.html">View cart</a>
+                                    </div>
+                                    <div class="product-item d-flex justify-content-between">
+                                        <div class="product-inner">
+                                            <a href="#" class="d-block">Brown Bag</a>
+                                            <span>1*199.00</span>
+                                        </div>
+                                        <div class="product-img">
+                                            <img src="images/header/cart/shape-1.png" alt="cart">
+                                            <a href="#">
+                                                <span><i class="fa-solid fa-x"></i></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product-item d-flex justify-content-between">
+                                        <div class="product-inner">
+                                            <a href="#" class="d-block">Brown Bag</a>
+                                            <span>1*199.00</span>
+                                        </div>
+                                        <div class="product-img">
+                                            <img src="images/header/cart/shape-2.png" alt="cart">
+                                            <a href="#">
+                                                <span><i class="fa-solid fa-x"></i></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="sub-total d-flex align-items-center justify-content-between">
+                                        <span>Subtotal:</span>
+                                        <span>$199.00</span>
+                                    </div>
+                                    <div class="popup-btn">
+                                        <a href="#" class="popup-link">Checkout</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
     <section class="hero-section ev-common-hero" style="background-image: url(images/common-banner/shape-1.png);">
         <div class="container-fluid">
             <div class="ev-hero-content">
                 <h2>Single Product</h2>
-                <span><a href="index-2.php">Home</a> > <a href="all-collections.php"> product ></a> Single</span>
+                <span><a href="index-2.html">Home</a> > <a href="all-collections.html"> product ></a> Single</span>
             </div>
         </div>
     </section>
-
-    <!-- BANNER-SECTION END  -->
-
-
     <section class="single-product-section">
         <div class="container">
             <div class="row">
@@ -68,7 +340,7 @@ include ("./libraries/variables.php"); ?>
                             <div class="slider__flex">
                                 <div class="slider__col">
                                     <div class="slider__thumbs">
-                                        <div class="swiper-container"> <!-- Слайдер с превью -->
+                                        <div class="swiper-container">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
                                                     <div class="slider__image"><img
@@ -100,7 +372,7 @@ include ("./libraries/variables.php"); ?>
                                     </div>
                                 </div>
                                 <div class="slider__images">
-                                    <div class="swiper-container"> <!-- Слайдер с изображениями -->
+                                    <div class="swiper-container">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
                                                 <div class="slider__image"><img
@@ -368,14 +640,9 @@ include ("./libraries/variables.php"); ?>
                             <div class="inner-form">
                                 <h3>Add Review</h3>
                                 <form>
-                                    <!-- General Information -->
                                     <input type="text" name="name" placeholder="Your Name" required>
-
                                     <input type="email" name="email" placeholder="Your Email" required>
-
                                     <input type="text" name="date" placeholder="Date of Purchase" required>
-
-                                    <!-- Overall Rating -->
                                     <div class="overall-rating">
                                         <div class="rating-wrapper d-flex align-content-center justify-content-between">
                                             <select class="inner-rating">
@@ -389,33 +656,22 @@ include ("./libraries/variables.php"); ?>
                                             <span><i class="fa-solid fa-angle-down"></i></span>
                                         </div>
                                     </div>
-
-                                    <!-- Specific Feedback -->
                                     <div class="overall-review d-flex align-items-center">
                                         <div class="review-comment">
                                             <label>Overall Review :</label>
                                         </div>
                                         <div class="review-container">
-                                            <button class="star"><span class="stararea">★</span></button>
-                                            <button class="star"><span class="stararea">★</span></button>
-                                            <button class="star"><span class="stararea">★</span></button>
-                                            <button class="star"><span class="stararea">★</span></button>
-                                            <button class="star"><span class="stararea">★</span></button>
+                                            <button class="star"><span class="stararea">â˜…</span></button>
+                                            <button class="star"><span class="stararea">â˜…</span></button>
+                                            <button class="star"><span class="stararea">â˜…</span></button>
+                                            <button class="star"><span class="stararea">â˜…</span></button>
+                                            <button class="star"><span class="stararea">â˜…</span></button>
                                         </div>
                                     </div>
-
-
-                                    <!-- Add other input fields as needed -->
-
-                                    <!-- Comments and Suggestions -->
                                     <div class="user-comment">
                                         <textarea id="comments" name="comments" rows="5"
                                             placeholder="Write your review here"></textarea>
                                     </div>
-
-                                    <!-- Add other input fields as needed -->
-
-                                    <!-- Submit Button -->
                                     <button class="submit-btn">Submit</button>
                                 </form>
                             </div>
@@ -425,9 +681,6 @@ include ("./libraries/variables.php"); ?>
             </div>
         </div>
     </section>
-
-    <!-- `PRODUCT-SECTION START  -->
-
     <section class="popular-product-section single-popular-product-section">
         <div class="container">
             <div class="heading-text">
@@ -437,7 +690,7 @@ include ("./libraries/variables.php"); ?>
                 <div class="swiper-wrapper">
                     <div class="swiper-slide product single-slide">
                         <div class="product-img">
-                            <a href="single-product.php">
+                            <a href="single-product.html">
                                 <img src="images/single-product/popular-product/shape-1.png" alt="product">
                             </a>
                             <div class="product-labels d-flex justify-content-between">
@@ -461,7 +714,7 @@ include ("./libraries/variables.php"); ?>
                                 <li><i class="fa-sharp fa-solid fa-star"></i></li>
                                 <li><i class="fa-sharp fa-solid fa-star"></i></li>
                             </ul>
-                            <h2 class="product-title"><a href="single-product.php">Original desi jeans</a></h2>
+                            <h2 class="product-title"><a href="single-product.html">Original desi jeans</a></h2>
                             <ul class="d-flex align-items-center">
                                 <li><span>$99</span></li>
                                 <li><span>$200</span></li>
@@ -470,7 +723,7 @@ include ("./libraries/variables.php"); ?>
                     </div>
                     <div class="swiper-slide product single-slide">
                         <div class="product-img">
-                            <a href="single-product.php">
+                            <a href="single-product.html">
                                 <img src="images/single-product/popular-product/shape-2.png" alt="product">
                             </a>
                             <div class="p-option">
@@ -490,7 +743,7 @@ include ("./libraries/variables.php"); ?>
                                 <li><i class="fa-sharp fa-solid fa-star"></i></li>
                                 <li><i class="fa-sharp fa-solid fa-star"></i></li>
                             </ul>
-                            <h2 class="product-title"><a href="single-product.php">Bag for woman</a></h2>
+                            <h2 class="product-title"><a href="single-product.html">Bag for woman</a></h2>
                             <ul class="d-flex align-items-center">
                                 <li><span>$99</span></li>
                                 <li><span>$200</span></li>
@@ -499,7 +752,7 @@ include ("./libraries/variables.php"); ?>
                     </div>
                     <div class="swiper-slide product single-slide">
                         <div class="product-img">
-                            <a href="single-product.php">
+                            <a href="single-product.html">
                                 <img src="images/single-product/popular-product/shape-3.png" alt="product">
                             </a>
                             <div class="product-labels d-flex justify-content-between">
@@ -522,7 +775,7 @@ include ("./libraries/variables.php"); ?>
                                 <li><i class="fa-sharp fa-solid fa-star"></i></li>
                                 <li><i class="fa-sharp fa-solid fa-star"></i></li>
                             </ul>
-                            <h2 class="product-title"><a href="single-product.php">Blue keds for men</a></h2>
+                            <h2 class="product-title"><a href="single-product.html">Blue keds for men</a></h2>
                             <ul class="d-flex align-items-center">
                                 <li><span>$99</span></li>
                                 <li><span>$200</span></li>
@@ -531,7 +784,7 @@ include ("./libraries/variables.php"); ?>
                     </div>
                     <div class="swiper-slide product single-slide">
                         <div class="product-img">
-                            <a href="single-product.php">
+                            <a href="single-product.html">
                                 <img src="images/single-product/popular-product/shape-4.png" alt="product">
                             </a>
                             <div class="p-option">
@@ -551,7 +804,7 @@ include ("./libraries/variables.php"); ?>
                                 <li><i class="fa-sharp fa-solid fa-star"></i></li>
                                 <li><i class="fa-sharp fa-solid fa-star"></i></li>
                             </ul>
-                            <h2 class="product-title"><a href="single-product.php">Original desi jeans</a></h2>
+                            <h2 class="product-title"><a href="single-product.html">Original desi jeans</a></h2>
                             <ul class="d-flex align-items-center">
                                 <li><span>$99</span></li>
                                 <li><span>$200</span></li>
@@ -560,7 +813,7 @@ include ("./libraries/variables.php"); ?>
                     </div>
                     <div class="swiper-slide product single-slide">
                         <div class="product-img">
-                            <a href="single-product.php">
+                            <a href="single-product.html">
                                 <img src="images/single-product/popular-product/shape-5.png" alt="product">
                             </a>
                             <div class="product-labels d-flex justify-content-between">
@@ -583,7 +836,7 @@ include ("./libraries/variables.php"); ?>
                                 <li><i class="fa-sharp fa-solid fa-star"></i></li>
                                 <li><i class="fa-sharp fa-solid fa-star"></i></li>
                             </ul>
-                            <h2 class="product-title"><a href="single-product.php">Bag for woman</a></h2>
+                            <h2 class="product-title"><a href="single-product.html">Bag for woman</a></h2>
                             <ul class="d-flex align-items-center">
                                 <li><span>$99</span></li>
                                 <li><span>$200</span></li>
@@ -592,7 +845,7 @@ include ("./libraries/variables.php"); ?>
                     </div>
                     <div class="swiper-slide product single-slide">
                         <div class="product-img">
-                            <a href="single-product.php">
+                            <a href="single-product.html">
                                 <img src="images/single-product/popular-product/shape-6.png" alt="product">
                             </a>
                             <div class="product-labels d-flex justify-content-between">
@@ -615,7 +868,7 @@ include ("./libraries/variables.php"); ?>
                                 <li><i class="fa-sharp fa-solid fa-star"></i></li>
                                 <li><i class="fa-sharp fa-solid fa-star"></i></li>
                             </ul>
-                            <h2 class="product-title"><a href="single-product.php">Blue keds for men</a></h2>
+                            <h2 class="product-title"><a href="single-product.html">Blue keds for men</a></h2>
                             <ul class="d-flex align-items-center">
                                 <li><span>$99</span></li>
                                 <li><span>$200</span></li>
@@ -627,43 +880,11 @@ include ("./libraries/variables.php"); ?>
             </div>
         </div>
     </section>
-
-    <!-- PRODUCT-SECTION END  -->
-
-
-    <!--    FOOTER-SECTION START -->
-
-    <<?php require ("./components/footer.php"); ?>
-
-        <!--    FOOTER-SECTION END  -->
-
-
-        <!-- FOOTER-ICONTOP START  -->
-
-        <div class="footer_iconTop">
-            <a href="#" id="button"><i class="fa-solid fa-arrow-up"></i></a>
-        </div>
-
-        <!-- FOOTER-ICONTOP END  -->
-
-
-        <!-- JS-SCRIPT START  -->
-
-
-        <script src="js/jquery-min.js"></script>
-        <script src="js/jquery-ui.js"></script>
-        <script src="js/popper.js"></script>
-        <script src="js/bootstrop-min.js"></script>
-        <script src="js/swiper.js"></script>
-        <script src="js/mmenu.js"></script>
-        <script src="js/leaflet.js"></script>
-        <script src="js/script.js"></script>
-
-
-        <!-- JS-SCRIPT END  -->
-
-
+    <?php require ("./components/footer.php"); ?>
+    <div class="footer_iconTop">
+        <a href="#" id="button"><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+    <?php require ("./components/script.php"); ?>
 </body>
-
 
 </html>

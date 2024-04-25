@@ -1,41 +1,19 @@
-<?php include ("./libraries/variables.php"); ?>
 <?php
-
-$PageIndex = 'collections';
-
+include ("./libraries/variables.php");
+include ("./helper/db-config.php");
 ?>
-
-
-
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
-    <title>Collections |
-        <?php echo (constant('siteTitle')); ?>
+    <title> Collections | <?php echo (constant('siteTitle')); ?>
     </title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Links  -->
-    <?php
-    echo require ("./components/links.php");
-    ?>
-    <!-- Links -->
+    <?php require ("./components/links.php"); ?>
 
 </head>
 
 <body>
-
-    <!-- HEADER-SECTION START  -->
-
     <?php require ("./components/header_collection.php"); ?>
-
-    <!-- HEADER-SECTION END  -->
-
-    <!-- BANNER-SECTION START  -->
-
     <section class="hero-section ev-common-hero" style="background-image: url(images/common-banner/shape-1.png);">
         <div class="container-fluid">
             <div class="ev-hero-content">
@@ -44,12 +22,6 @@ $PageIndex = 'collections';
             </div>
         </div>
     </section>
-
-    <!-- BANNER-SECTION END  -->
-
-
-    <!-- `PRODUCT-SECTION START  -->
-
     <section class="product-section product-section-two product-collection-section">
         <div class="container">
             <div class="product-top d-md-flex align-items-end justify-content-between d-sm-block">
@@ -433,44 +405,11 @@ $PageIndex = 'collections';
             <a href="#" class="view-all-two">Load More</a>
         </div>
     </section>
-
-    <!-- PRODUCT-SECTION END  -->
-
-
-
-    <!-- PRODUCT-SECTION END  -->
-
-    <!--    FOOTER-SECTION START -->
-
     <?php require ("./components/footer.php"); ?>
-
-    <!--    FOOTER-SECTION END  -->
-
-
-    <!-- FOOTER-ICONTOP START  -->
-
     <div class="footer_iconTop">
         <a href="#" id="button"><i class="fa-solid fa-arrow-up"></i></a>
     </div>
-
-    <!-- FOOTER-ICONTOP END  -->
-
-
-    <!-- JS-SCRIPT START  -->
-
-    <script src="js/jquery-min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrop-min.js"></script>
-    <script src="js/swiper.js"></script>
-    <script src="js/mmenu.js"></script>
-    <script src="js/leaflet.js"></script>
-    <script src="js/script.js"></script>
-
-    <!-- JS-SCRIPT END  -->
-
-
+    <?php require ("./components/script.php"); ?>
 </body>
-
 
 </html>

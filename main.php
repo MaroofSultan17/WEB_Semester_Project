@@ -1,22 +1,13 @@
 <?php
-include ("./helper/session.php");
-include ("./helper/db-config.php");
 include ("./libraries/variables.php");
-$PageIndex = "home";
+include ("./helper/db-config.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Main |
-        <?php echo (constant('siteTitle')); ?>
-    </title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php
-    echo require ("./components/links.php");
-    ?>
+    <title> Login | Signup | <?php echo (constant('siteTitle')); ?> </title>
+    <?php require ("./components/links.php"); ?>
 </head>
 
 <body>
@@ -1133,14 +1124,7 @@ $PageIndex = "home";
     <div class="footer_iconTop">
         <a href="#" id="button"><i class="fa-solid fa-arrow-up"></i></a>
     </div>
-    <script src="js/jquery-min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrop-min.js"></script>
-    <script src="js/swiper.js"></script>
-    <script src="js/mmenu.js"></script>
-    <script src="js/leaflet.js"></script>
-    <script src="js/script.js"></script>
+    <?php require ("./components/script.php"); ?>
 
 </body>
 
