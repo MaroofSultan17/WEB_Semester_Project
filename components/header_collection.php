@@ -49,7 +49,7 @@
                                     </div>
                                     <ul class="menu-items">
                                         <li class="menu-item-has-children">
-                                            <a href="./index.php" class="nav-link  <?php if ($PageIndex == 'home') {
+                                            <a href="./main.php" class="nav-link  <?php if ($PageIndex == 'home') {
                                                 echo "active";
                                             } else {
                                                 echo "";

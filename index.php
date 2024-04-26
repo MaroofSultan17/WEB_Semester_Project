@@ -227,46 +227,46 @@ include ("./helper/db-config.php");
                                             <div class="list-item">
                                                 <h4 class="title">Men's Fashion</h4>
                                                 <ul>
-                                                    <li><a href="shop-with-sidebar.php">Men's T-Shirt</a></li>
-                                                    <li><a href="shop-with-sidebar.php">Men's Suit</a></li>
-                                                    <li><a href="shop-with-sidebar.php">Casual Shirts</a></li>
-                                                    <li><a href="shop-with-sidebar.php">Men's Jeans</a></li>
-                                                    <li><a href="shop-with-sidebar.php">Men's shoes</a></li>
+                                                    <li><a href="shops.php">Men's T-Shirt</a></li>
+                                                    <li><a href="shops.php">Men's Suit</a></li>
+                                                    <li><a href="shops.php">Casual Shirts</a></li>
+                                                    <li><a href="shops.php">Men's Jeans</a></li>
+                                                    <li><a href="shops.php">Men's shoes</a></li>
                                                 </ul>
                                                 <h4 class="title">Men's Beauty</h4>
                                                 <ul>
-                                                    <li><a href="shop-with-sidebar.php">Face Care</a></li>
-                                                    <li><a href="shop-with-sidebar.php">Hair care</a></li>
-                                                    <li><a href="shop-with-sidebar.php">Body care</a></li>
+                                                    <li><a href="shops.php">Face Care</a></li>
+                                                    <li><a href="shops.php">Hair care</a></li>
+                                                    <li><a href="shops.php">Body care</a></li>
                                                 </ul>
                                             </div>
                                             <div class="list-item">
                                                 <h4 class="title">Women's Fashion</h4>
                                                 <ul>
-                                                    <li><a href="shop-with-sidebar.php">Night Gown</a></li>
-                                                    <li><a href="shop-with-sidebar.php">Soft Towel</a></li>
-                                                    <li><a href="shop-with-sidebar.php">Fashion Dress</a></li>
-                                                    <li><a href="shop-with-sidebar.php">Women's Bag</a></li>
+                                                    <li><a href="shops.php">Night Gown</a></li>
+                                                    <li><a href="shops.php">Soft Towel</a></li>
+                                                    <li><a href="shops.php">Fashion Dress</a></li>
+                                                    <li><a href="shops.php">Women's Bag</a></li>
                                                 </ul>
                                                 <h4 class="title">Women's Beauty</h4>
                                                 <ul>
-                                                    <li><a href="shop-with-sidebar.php">Face Care</a></li>
-                                                    <li><a href="shop-with-sidebar.php">Lip Make-up</a></li>
-                                                    <li><a href="shop-with-sidebar.php">Hand care</a></li>
-                                                    <li><a href="shop-with-sidebar.php">Cross-body Bags</a></li>
+                                                    <li><a href="shops.php">Face Care</a></li>
+                                                    <li><a href="shops.php">Lip Make-up</a></li>
+                                                    <li><a href="shops.php">Hand care</a></li>
+                                                    <li><a href="shops.php">Cross-body Bags</a></li>
                                                 </ul>
                                             </div>
                                             <div class="list-item">
                                                 <h4 class="title">Home, Kitchen</h4>
                                                 <ul>
-                                                    <li><a href="shop-with-sidebar.php">Kitchen Appliances</a></li>
-                                                    <li><a href="shop-with-sidebar.php">Lights & Electrical</a></li>
-                                                    <li><a href="shop-with-sidebar.php">Basket & Bucket</a></li>
-                                                    <li><a href="shop-with-sidebar.php">Kitchen Accessories</a></li>
-                                                    <li><a href="shop-with-sidebar.php">Box & Container</a></li>
-                                                    <li><a href="shop-with-sidebar.php">Disposables</a></li>
-                                                    <li><a href="shop-with-sidebar.php">Rack & Organizer</a></li>
-                                                    <li><a href="shop-with-sidebar.php">Gardening</a></li>
+                                                    <li><a href="shops.php">Kitchen Appliances</a></li>
+                                                    <li><a href="shops.php">Lights & Electrical</a></li>
+                                                    <li><a href="shops.php">Basket & Bucket</a></li>
+                                                    <li><a href="shops.php">Kitchen Accessories</a></li>
+                                                    <li><a href="shops.php">Box & Container</a></li>
+                                                    <li><a href="shops.php">Disposables</a></li>
+                                                    <li><a href="shops.php">Rack & Organizer</a></li>
+                                                    <li><a href="shops.php">Gardening</a></li>
                                                 </ul>
                                             </div>
                                             <div class="list-item">
@@ -381,7 +381,7 @@ include ("./helper/db-config.php");
                     while ($row = mysqli_fetch_array($result)) {
                         ?>
                         <div class="single-categorie">
-                            <a href="shop-with-sidebar.php" class="categorie-link">
+                            <a href="shops.php" class="categorie-link">
                                 <div class="categorie-img">
                                     <img src="<?php echo $row['image']; ?>" alt="categories">
                                 </div>
@@ -402,7 +402,7 @@ include ("./helper/db-config.php");
                 }
                 ?>
             </div>
-            <a href="shop-with-sidebar.php" class="view-all">View All</a>
+            <a href="shops.php" class="view-all">View All</a>
         </div>
     </section>
     <section class="collection-section">
@@ -705,7 +705,7 @@ include ("./helper/db-config.php");
                 </div>
             </div>
         </div>
-        <a href="shop-with-sidebar.php" class="view-all">View All</a>
+        <a href="shops.php" class="view-all">View All</a>
         </div>
     </section>
     <section class="featured-product-section">
