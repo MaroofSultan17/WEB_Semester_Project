@@ -1,5 +1,4 @@
 <?php
-
 define("siteTitle", "Admin Evani");
 define("brandName", "Evani");
 define("siteEmail", "maroofsultan17@gmail.com");
@@ -10,5 +9,5 @@ define("facebook", "https://www.facebook.com/");
 define("twitter", "https://twitter.com/");
 define("linkedin", "https://www.linkedin.com/");
 define("youtube", "https://www.youtube.com/");
-
+define("portfolio", "https://profile.maroofsultan.me/");
 ?>

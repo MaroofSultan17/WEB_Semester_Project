@@ -48,7 +48,7 @@ include ('libraries/variables.php');
 							<option value="popular">Popular</option>
 						</select>
 					</div>
-					<button type="submit" class="btn btn-primary mb-3" name="addproduct">Add Product</button>
+					<button type="submit" class="btn btn-primary mb-3 w-100 rounded-pill" name="addproduct">Add	Product</button>
 				</form>
 			</div>
 		</div>
