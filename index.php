@@ -30,29 +30,16 @@ include ("./helper/db-config.php");
                 </div>
                 <div class="top-bar-social d-flex align-items-center">
                     <ul class="view-switcher d-flex align-items-center">
-                        <li>
-                            <span>usd<i class="fa-solid fa-angle-down"></i></span>
-                            <ul class="evani-curency">
-                                <li><a href="#">euro</a></li>
-                                <li><a href="#">tk</a></li>
-                                <li><a href="#">usd</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <span>en<i class="fa-solid fa-angle-down"></i></span>
-                            <ul class="evani-curency">
-                                <li><a href="#">english</a></li>
-                                <li><a href="#">bangla</a></li>
-                                <li><a href="#">jerman</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul class="social-icon d-flex align-items-center">
-                        <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a></li>
-                        <li><a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a></li>
-                        <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                        <li><a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a></li>
-                    </ul>
+                        <ul class="social-icon d-flex align-items-center">
+                            <li><a href="<?php echo constant('facebook'); ?>"><i
+                                        class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="<?php echo constant('twitter'); ?>"><i class="fa-brands fa-twitter"></i></a>
+                            </li>
+                            <li><a href="<?php echo constant('linkedin'); ?>"><i
+                                        class="fa-brands fa-linkedin-in"></i></a></li>
+                            <li><a href="<?php echo constant('youtube'); ?>"><i class="fa-brands fa-youtube"></i></a>
+                            </li>
+                        </ul>
                 </div>
             </div>
         </div>
@@ -83,7 +70,7 @@ include ("./helper/db-config.php");
                                         <label class="close-btn fas fa-times popup-label"></label>
                                         <label class="la-search-pr">Search Product</label>
                                         <form class="search-product d-flex align-items-center justify-content-between"
-                                            action="https://ethemestudio.com/search" method="GET">
+                                            action="#" method="GET">
                                             <input type="text" name="query"
                                                 placeholder="Type to search i.e “sunglass”...">
                                             <button type="submit">
@@ -220,7 +207,6 @@ include ("./helper/db-config.php");
             <div class="mega-menu-wrapper">
                 <div class="container">
                     <div class="wrapper-items d-flex align-items-center">
-                        <!-- menu start here -->
                         <div class="header-item item-left">
                             <div class="menu-overlay">
                             </div>
@@ -1313,14 +1299,7 @@ include ("./helper/db-config.php");
     <div class="footer_iconTop">
         <a href="#" id="button"><i class="fa-solid fa-arrow-up"></i></a>
     </div>
-    <script src="js/jquery-min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrop-min.js"></script>
-    <script src="js/swiper.js"></script>
-    <script src="js/mmenu.js"></script>
-    <script src="js/leaflet.js"></script>
-    <script src="js/script.js"></script>
+    <?php require ("./components/script.php"); ?>
 </body>
 
 </html>

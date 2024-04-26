@@ -6,7 +6,7 @@ include ("./helper/db-config.php");
 <html lang="en">
 
 <head>
-    <title> Login | Signup | <?php echo (constant('siteTitle')); ?> </title>
+    <title>Main | <?php echo (constant('siteTitle')); ?> </title>
     <?php require ("./components/links.php"); ?>
 </head>
 
