@@ -1,5 +1,4 @@
 <?php
-session_start();
 if (empty($_SESSION['SESSION_ID'])) {
     header('Location:./index.php');
     // echo $_SESSION['SESSION_ID'];

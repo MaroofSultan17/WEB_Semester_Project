@@ -1,9 +1,11 @@
 <?php
+session_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "ecommerce";
-$conn = new mysqli($servername, $username, $password, $dbname);
+$dbname = "evani";
+$port = 3300;
+$conn = new mysqli($servername, $username, $password, $dbname,  $port);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }else{

@@ -4,7 +4,7 @@ if (isset($_REQUEST["signin"])) {
     $Email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
     $SecurePassword = md5($password);
-    $Query = "SELECT token, securepassword FROM admin WHERE email='$Email' AND securepassword='$SecurePassword'";
+    $Query = "SELECT token, securepassword FROM adminlogin WHERE email='$Email' AND securepassword='$SecurePassword'";
     // echo $Query;  die;
     $Result = mysqli_query($conn, $Query);
     if ($Result->num_rows > 0) {
